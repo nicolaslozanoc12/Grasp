@@ -10,7 +10,6 @@ public class Pais {
     public Pais(String nombre) {
         this.nombre = nombre;
     }
-
     public int getId() {
         return id;
     }

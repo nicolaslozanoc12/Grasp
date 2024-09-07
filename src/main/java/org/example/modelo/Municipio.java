@@ -2,10 +2,11 @@ package org.example.modelo;
 
 public class Municipio {
     private int id;
-    private String nombre;
-    private Departamento departamento;
-    public Municipio( String nombre, int id_departamento ) {
+    private final String nombre;
+    private final Departamento departamento;
+    public Municipio( String nombre, Departamento departamento ) {
         this.nombre = nombre;
+        this.departamento = departamento;
     }
     public int getId() {
         return id;

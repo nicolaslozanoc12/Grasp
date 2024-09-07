@@ -2,13 +2,13 @@ package org.example.modelo;
 
 public class Direccion {
     private int id;
-    private Municipio municipio;
-    private Departamento departamento;
-    private  Pais pais;
-    private String calle;
-    private String carrera;
-    private  String coordenada;
-    private String descripcion;
+    private final Municipio municipio;
+    private final Departamento departamento;
+    private final Pais pais;
+    private final String calle;
+    private final String carrera;
+    private final String coordenada;
+    private final String descripcion;
 
     public Direccion(Municipio municipio, Departamento departamento, Pais pais, String calle, String carrera, String coordenada, String descripcion) {
         this.municipio = municipio;
@@ -18,6 +18,10 @@ public class Direccion {
         this.carrera = carrera;
         this.coordenada = coordenada;
         this.descripcion = descripcion;
+    }
+
+    public int getId() {
+        return id;
     }
     public Municipio getMunicipio() {
         return municipio;
