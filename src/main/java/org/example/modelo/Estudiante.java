@@ -6,8 +6,8 @@ public class Estudiante extends Persona{
     private  Double promedio;
 
 
-    public Estudiante(String nombre, String apellidos, Direccion direccion, String codigo, String programa, Double promedio) {
-        super(nombre, apellidos, direccion);
+    public Estudiante(int id,String nombre, String apellidos, Direccion direccion, String codigo, String programa, Double promedio) {
+        super(id,nombre, apellidos, direccion);
         this.codigo = codigo;
         this.programa = programa;
         this.promedio = promedio;

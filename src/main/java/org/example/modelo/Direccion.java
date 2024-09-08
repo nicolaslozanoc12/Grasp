@@ -1,7 +1,7 @@
 package org.example.modelo;
 
 public class Direccion {
-    private int id;
+    private final int id;
     private final Municipio municipio;
     private final Departamento departamento;
     private final Pais pais;
@@ -10,7 +10,8 @@ public class Direccion {
     private final String coordenada;
     private final String descripcion;
 
-    public Direccion(Municipio municipio, Departamento departamento, Pais pais, String calle, String carrera, String coordenada, String descripcion) {
+    public Direccion(int id,Municipio municipio, Departamento departamento, Pais pais, String calle, String carrera, String coordenada, String descripcion) {
+        this.id =id;
         this.municipio = municipio;
         this.departamento = departamento;
         this.pais = pais;

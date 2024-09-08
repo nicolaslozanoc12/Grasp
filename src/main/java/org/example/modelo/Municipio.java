@@ -4,7 +4,8 @@ public class Municipio {
     private int id;
     private final String nombre;
     private final Departamento departamento;
-    public Municipio( String nombre, Departamento departamento ) {
+    public Municipio(int id ,String nombre, Departamento departamento ) {
+        this.id = id;
         this.nombre = nombre;
         this.departamento = departamento;
     }

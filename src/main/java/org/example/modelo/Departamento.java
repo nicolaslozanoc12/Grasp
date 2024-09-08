@@ -8,7 +8,8 @@ public class Departamento{
     private String nombre;
     private Pais pais;
 
-    public Departamento(String nombre, Pais pais) {
+    public Departamento(int id, String nombre, Pais pais) {
+        this.id = id;
         this.nombre = nombre;
         this.pais=pais;
     }

@@ -6,7 +6,8 @@ public class Persona {
     private final String apellidos;
     private final Direccion direccion;
 
-    public Persona( String nombre, String apellidos, Direccion direccion) {
+    public Persona(int id, String nombre, String apellidos, Direccion direccion) {
+        this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.direccion = direccion;
@@ -31,6 +32,14 @@ public class Persona {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
     }
 
     public String getNombre() {
