@@ -4,37 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="se sube todo el modelo de negocio">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO/CargoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO/DAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO/DepartamentoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO/DireccionDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO/EmpleadoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO/EstudianteDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO/EstudiantesInscritosDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO/MunicipioDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO/PaisDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO/PersonalDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO/PersonalInscritoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/CargoDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/DepartamentoDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/DireccionDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EstudianteDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/MunicipioDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PaisDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/conexion/CrearDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="Algunas clases completas de DAO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Departamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Departamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Direccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Direccion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Estudiante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Municipio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Municipio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Pais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Pais.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/base.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EstudianteDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EstudianteDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Empleado.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +26,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2lkfaL9xYDFITrJqO6AFyPEZpRC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -67,6 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -120,7 +95,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1725729058976</updated>
-      <workItem from="1725729060139" duration="28210000" />
+      <workItem from="1725729060139" duration="28309000" />
+      <workItem from="1725804272844" duration="3449000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion proyecto con documentos">
       <option name="closed" value="true" />
@@ -138,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725743408614</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Algunas clases completas de DAO">
+      <option name="closed" value="true" />
+      <created>1725766208893</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725766208893</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +142,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creacion proyecto con documentos" />
     <MESSAGE value="se sube todo el modelo de negocio" />
-    <option name="LAST_COMMIT_MESSAGE" value="se sube todo el modelo de negocio" />
+    <MESSAGE value="Algunas clases completas de DAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Algunas clases completas de DAO" />
   </component>
 </project>
