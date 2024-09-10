@@ -1,23 +1,28 @@
 package org.example.controlador;
 
+import org.example.DAO.PersonalDAO;
 import org.example.ImplDAO.PersonalDAOImpl;
 import org.example.modelo.Persona;
-import org.example.servicio.PersonalServicio;
+import org.example.servicio.Impl.PersonalServicio;
+import org.example.servicio.Impl.PersonalServicioImpl;
+import org.example.servicio.Interfaz.Servicio;
 
 import java.util.List;
 
 public class PersonalControlador {
-    private final PersonalServicio personalServicio=new PersonalServicio();
+    private final Servicio<Persona> personalServicio;
 
     public PersonalControlador() {
+        PersonalDAOImpl personalDAO=new PersonalDAOImpl();
+        this.personalServicio=new PersonalServicioImpl(personalDAO);
     }
 
     public void agregarPersonal(Persona objeto) {
-        personalServicio.agregarPersonal(objeto);
+        personalServicio.agregar(objeto);
     }
 
     public void listarPersonal() {
-        List<Persona> personal = personalServicio.listarPersonal();
+        List<Persona> personal = personalServicio.listarTodos();
         for (Persona persona : personal) {
             System.out.printf("Id: %d Nombre: %s Apellidos: %s Dirección: %s\n",
                     persona.getId(),
@@ -28,18 +33,18 @@ public class PersonalControlador {
     }
 
     public Persona obtenerPersonalPorId(int id) {
-        return personalServicio.obtenerPersonalPorId(id);
+        return personalServicio.obtenerPorId(id);
     }
 
     public Persona obtenerPersonalPorNombre(String nombre) {
-        return personalServicio.obtenerPersonalPorNombre(nombre);
+        return personalServicio.obtenerPorNombre(nombre);
     }
 
     public void actualizarPersonal(Persona objeto, int id) {
-        personalServicio.actualizarPersonal(objeto, id);
+        personalServicio.actualizar(objeto, id);
     }
 
     public void eliminarPersonal(int id) {
-        personalServicio.eliminarPersonal(id);
+        personalServicio.eliminar(id);
     }
 }

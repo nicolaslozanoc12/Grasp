@@ -48,5 +48,5 @@ public class Persona implements Todos {
         return nombre;
     }
 
-
+    public void setDireccion(int id){this.id=id;}
 }

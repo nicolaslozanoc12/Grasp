@@ -2,22 +2,25 @@ package org.example.controlador;
 
 import org.example.ImplDAO.PersonalInscritoDAOImpl;
 import org.example.modelo.PersonalInscrito;
-import org.example.servicio.PersonalInscritoServicio;
+import org.example.servicio.Impl.PersonalInscritoServicioImpl;
+import org.example.servicio.Interfaz.Servicio;
 
 import java.util.List;
 
 public class PersonalInscritoControlador {
-    private final PersonalInscritoServicio personalInscritoServicio=new PersonalInscritoServicio();
+    private final Servicio<PersonalInscrito> personalInscritoServicio;
 
     public PersonalInscritoControlador() {
+        PersonalInscritoDAOImpl personalInscritoDAO=new PersonalInscritoDAOImpl();
+        this.personalInscritoServicio=new PersonalInscritoServicioImpl(personalInscritoDAO);
     }
 
     public void agregarPersonalInscrito(PersonalInscrito objeto) {
-        personalInscritoServicio.agregarPersonalInscrito(objeto);
+        personalInscritoServicio.agregar(objeto);
     }
 
     public void listarPersonalInscrito() {
-        List<PersonalInscrito> personalInscritos = personalInscritoServicio.listarPersonalInscrito();
+        List<PersonalInscrito> personalInscritos = personalInscritoServicio.listarTodos();
         for (PersonalInscrito personalInscrito : personalInscritos) {
             System.out.printf("Id: %d Empleado: %s\n",
                     personalInscrito.getId(),
@@ -26,18 +29,18 @@ public class PersonalInscritoControlador {
     }
 
     public PersonalInscrito obtenerPersonalInscritoPorId(int id) {
-        return personalInscritoServicio.obtenerPersonalInscritoPorId(id);
+        return personalInscritoServicio.obtenerPorId(id);
     }
 
     public PersonalInscrito obtenerPersonalInscritoPorNombre(String nombre) {
-        return personalInscritoServicio.obtenerPersonalInscritoPorNombre(nombre);
+        return personalInscritoServicio.obtenerPorNombre(nombre);
     }
 
     public void actualizarPersonalInscrito(PersonalInscrito objeto, int id) {
-        personalInscritoServicio.actualizarPersonalInscrito(objeto, id);
+        personalInscritoServicio.actualizar(objeto, id);
     }
 
     public void eliminarPersonalInscrito(int id) {
-        personalInscritoServicio.eliminarPersonalInscrito(id);
+        personalInscritoServicio.eliminar(id);
     }
 }

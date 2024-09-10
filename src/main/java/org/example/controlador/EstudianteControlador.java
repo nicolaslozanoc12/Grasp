@@ -1,24 +1,27 @@
 package org.example.controlador;
 
 import org.example.ImplDAO.EstudianteDAOImpl;
-import org.example.modelo.Empleado;
 import org.example.modelo.Estudiante;
-import org.example.servicio.EstudianteServicio;
+import org.example.servicio.Impl.EstudianteServicioImpl;
+import org.example.servicio.Interfaz.EstudianteServicio;
+import org.example.servicio.Interfaz.Servicio;
 
 import java.util.List;
 
 public class EstudianteControlador {
-    private final EstudianteServicio estudianteServicio=new EstudianteServicio();
+    private final Servicio<Estudiante> estudianteServicio;
 
     public EstudianteControlador() {
+        EstudianteDAOImpl estudianteDAO=new EstudianteDAOImpl();
+        this.estudianteServicio=new EstudianteServicioImpl(estudianteDAO);
     }
 
     public void agregarEstudiante(Estudiante objeto) {
-        estudianteServicio.agregarEstudiante(objeto);
+        estudianteServicio.agregar(objeto);
     }
 
     public void listarEstudiantes() {
-        List<Estudiante> estudiantes = estudianteServicio.listarEstudiantes();
+        List<Estudiante> estudiantes = estudianteServicio.listarTodos();
         for (Estudiante estudiante : estudiantes) {
             System.out.printf("Id: %d Codigo: %s Programa: %s Promedio: %.2f\n",
                     estudiante.getId(),
@@ -29,18 +32,18 @@ public class EstudianteControlador {
     }
 
     public Estudiante obtenerEstudiantePorId(int id) {
-        return estudianteServicio.obtenerEstudiantePorId(id);
+        return estudianteServicio.obtenerPorId(id);
     }
 
     public Estudiante obtenerEstudiantePorNombre(String nombre) {
-        return estudianteServicio.obtenerEstudiantePorNombre(nombre);
+        return estudianteServicio.obtenerPorNombre(nombre);
     }
 
     public void actualizarEstudiante(Estudiante objeto, int id) {
-        estudianteServicio.actualizarEstudiante(objeto, id);
+        estudianteServicio.actualizar(objeto, id);
     }
 
     public void eliminarEstudiante(int id) {
-        estudianteServicio.eliminarEstudiante(id);
+        estudianteServicio.eliminar(id);
     }
 }

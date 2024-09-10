@@ -1,4 +1,4 @@
-package org.example.servicio;
+package org.example.servicio.Impl;
 
 import org.example.ImplDAO.PersonalDAOImpl;
 import org.example.modelo.Persona;

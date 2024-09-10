@@ -1,24 +1,26 @@
 package org.example.controlador;
 
 import org.example.ImplDAO.DireccionDAOImpl;
-import org.example.modelo.Departamento;
 import org.example.modelo.Direccion;
-import org.example.servicio.DireccionServicio;
+import org.example.servicio.Impl.DireccionServicioImpl;
+import org.example.servicio.Interfaz.Servicio;
 
 import java.util.List;
 
 public class DireccionControlador {
-    private final DireccionServicio direccionServicio=new DireccionServicio();
+    private final Servicio<Direccion> direccionServicio;
 
     public DireccionControlador() {
+        DireccionDAOImpl direccionDAO=new DireccionDAOImpl();
+        this.direccionServicio=new DireccionServicioImpl(direccionDAO);
     }
 
     public void agregarDireccion(Direccion objeto) {
-        direccionServicio.agregarDireccion(objeto);
+        direccionServicio.agregar(objeto);
     }
 
     public void listarDirecciones() {
-        List<Direccion> direcciones = direccionServicio.listarDirecciones();
+        List<Direccion> direcciones = direccionServicio.listarTodos();
         for (Direccion direccion : direcciones) {
             System.out.println("Id: " + direccion.getId() +
                     " Municipio: " + direccion.getMunicipio().getNombre() +
@@ -32,19 +34,19 @@ public class DireccionControlador {
     }
 
     public Direccion obtenerDireccionPorId(int id) {
-        return direccionServicio.obtenerDireccionPorId(id);
+        return direccionServicio.obtenerPorId(id);
     }
 
     public Direccion obtenerDireccionPorNombre(String nombre) {
-        return direccionServicio.obtenerDireccionPorNombre(nombre);
+        return direccionServicio.obtenerPorNombre(nombre);
     }
 
     public void actualizarDireccion(Direccion objeto, int id) {
-        direccionServicio.actualizarDireccion(objeto, id);
+        direccionServicio.actualizar(objeto, id);
     }
 
     public void eliminarDireccion(int id) {
-        direccionServicio.eliminarDireccion(id);
+        direccionServicio.eliminar(id);
     }
 
 

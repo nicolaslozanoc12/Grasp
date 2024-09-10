@@ -1,23 +1,28 @@
 package org.example.controlador;
 
+import org.example.DAO.EstudiantesInscritosDAO;
 import org.example.ImplDAO.EstudiantesInscritosDAOImpl;
 import org.example.modelo.EstudiantesInscritos;
-import org.example.servicio.EstudiantesInscritosServicio;
+import org.example.servicio.Impl.EstudiantesInscritosServicioImpl;
+import org.example.servicio.Interfaz.EstudiantesInscritosServicio;
+import org.example.servicio.Interfaz.Servicio;
 
 import java.util.List;
 
 public class EstudiantesInscritosControlador {
-    private final EstudiantesInscritosServicio estudiantesInscritosServicio=new EstudiantesInscritosServicio();
+    private final Servicio<EstudiantesInscritos> estudiantesInscritosServicio;
 
     public EstudiantesInscritosControlador() {
+        EstudiantesInscritosDAOImpl estudiantesInscritosDAO=new EstudiantesInscritosDAOImpl();
+        this.estudiantesInscritosServicio=new EstudiantesInscritosServicioImpl(estudiantesInscritosDAO);
     }
 
     public void agregarEstudiantesInscritos(EstudiantesInscritos objeto) {
-        estudiantesInscritosServicio.agregarEstudiantesInscritos(objeto);
+        estudiantesInscritosServicio.agregar(objeto);
     }
 
     public void listarEstudiantesInscritos() {
-        List<EstudiantesInscritos> estudiantesInscritos = estudiantesInscritosServicio.listarEstudiantesInscritos();
+        List<EstudiantesInscritos> estudiantesInscritos = estudiantesInscritosServicio.listarTodos();
         for (EstudiantesInscritos estudiante : estudiantesInscritos) {
             System.out.printf("Id: %d Persona: %s",
                     estudiante.getId(),
@@ -26,18 +31,18 @@ public class EstudiantesInscritosControlador {
     }
 
     public EstudiantesInscritos obtenerEstudiantesInscritosPorId(int id) {
-        return estudiantesInscritosServicio.obtenerEstudiantesInscritosPorId(id);
+        return estudiantesInscritosServicio.obtenerPorId(id);
     }
 
     public EstudiantesInscritos obtenerEstudiantesInscritosPorNombre(String nombre) {
-        return estudiantesInscritosServicio.obtenerEstudiantesInscritosPorNombre(nombre);
+        return estudiantesInscritosServicio.obtenerPorNombre(nombre);
     }
 
     public void actualizarEstudiantesInscritos(EstudiantesInscritos objeto, int id) {
-        estudiantesInscritosServicio.actualizarEstudiantesInscritos(objeto, id);
+        estudiantesInscritosServicio.actualizar(objeto, id);
     }
 
     public void eliminarEstudiantesInscritos(int id) {
-        estudiantesInscritosServicio.eliminarEstudiantesInscritos(id);
+        estudiantesInscritosServicio.eliminar(id);
     }
 }
