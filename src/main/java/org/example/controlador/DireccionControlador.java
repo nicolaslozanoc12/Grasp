@@ -8,10 +8,9 @@ import org.example.servicio.DireccionServicio;
 import java.util.List;
 
 public class DireccionControlador {
-    private final DireccionServicio direccionServicio;
+    private final DireccionServicio direccionServicio=new DireccionServicio();
 
-    public DireccionControlador(DireccionServicio direccionServicio) {
-        this.direccionServicio = direccionServicio;
+    public DireccionControlador() {
     }
 
     public void agregarDireccion(Direccion objeto) {

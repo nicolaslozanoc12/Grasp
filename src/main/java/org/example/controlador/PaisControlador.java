@@ -8,10 +8,9 @@ import java.util.List;
 
 
 public class PaisControlador {
-    private final PaisServicio paisServicio;
+    private final PaisServicio paisServicio=new PaisServicio();
 
-    public PaisControlador(PaisServicio paisServicio) {
-        this.paisServicio = paisServicio;
+    public PaisControlador() {
     }
 
     public void agregarPais(Pais objeto) {

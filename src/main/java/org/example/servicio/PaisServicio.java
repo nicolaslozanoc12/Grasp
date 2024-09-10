@@ -6,10 +6,9 @@ import org.example.modelo.Pais;
 import java.util.List;
 
 public class PaisServicio {
-    private final PaisDAOImpl paisDAO;
+    private final PaisDAOImpl paisDAO=new PaisDAOImpl();
 
-    public PaisServicio(PaisDAOImpl paisDAO) {
-        this.paisDAO = paisDAO;
+    public PaisServicio() {
     }
 
     public void agregarPais(Pais objeto) {

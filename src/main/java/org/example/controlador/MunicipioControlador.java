@@ -7,10 +7,9 @@ import org.example.servicio.MunicipioServicio;
 import java.util.List;
 
 public class MunicipioControlador {
-    private final MunicipioServicio municipioServicio;
+    private final MunicipioServicio municipioServicio=new MunicipioServicio();
 
-    public MunicipioControlador(MunicipioServicio municipioServicio) {
-        this.municipioServicio = municipioServicio;
+    public MunicipioControlador() {
     }
 
     public void agregarMunicipio(Municipio objeto) {

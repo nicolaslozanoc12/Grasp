@@ -6,10 +6,9 @@ import org.example.modelo.Municipio;
 import java.util.List;
 
 public class MunicipioServicio {
-    private final MunicipioDAOImpl municipioDAO;
+    private final MunicipioDAOImpl municipioDAO=new MunicipioDAOImpl();
 
-    public MunicipioServicio(MunicipioDAOImpl municipioDAO) {
-        this.municipioDAO = municipioDAO;
+    public MunicipioServicio() {
     }
 
     public void agregarMunicipio(Municipio objeto) {

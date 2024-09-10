@@ -7,10 +7,9 @@ import org.example.modelo.Direccion;
 import java.util.List;
 
 public class DireccionServicio {
-    private final DireccionDAOImpl direccionDAO;
+    private final DireccionDAOImpl direccionDAO=new DireccionDAOImpl();
 
-    public DireccionServicio(DireccionDAOImpl direccionDAO) {
-        this.direccionDAO = direccionDAO;
+    public DireccionServicio() {
     }
 
     public void agregarDireccion(Direccion objeto) {

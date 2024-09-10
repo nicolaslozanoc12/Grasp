@@ -7,10 +7,10 @@ import org.example.servicio.DepartamentoServicio;
 import java.util.List;
 
 public class DepartamentoControlador {
-    private final DepartamentoServicio departamentoServicio;
+    private final DepartamentoServicio departamentoServicio=new DepartamentoServicio();
 
-    public DepartamentoControlador(DepartamentoServicio departamentoServicio) {
-        this.departamentoServicio = departamentoServicio;
+    public DepartamentoControlador() {
+
     }
 
     public void agregarDepartamento(Departamento objeto) {

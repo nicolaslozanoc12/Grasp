@@ -7,10 +7,9 @@ import org.example.servicio.EmpleadoServicio;
 import java.util.List;
 
 public class EmpleadoControlador {
-    private final EmpleadoServicio empleadoServicio;
+    private final EmpleadoServicio empleadoServicio=new EmpleadoServicio();
 
-    public EmpleadoControlador(EmpleadoServicio empleadoServicio) {
-        this.empleadoServicio = empleadoServicio;
+    public EmpleadoControlador() {
     }
 
     public void agregarEmpleado(Empleado objeto) {

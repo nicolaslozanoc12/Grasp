@@ -6,10 +6,9 @@ import org.example.modelo.Departamento;
 import java.util.List;
 
 public class DepartamentoServicio {
-    private final DepartamentoDAOImpl departamentoDAO;
+    private final DepartamentoDAOImpl departamentoDAO=new DepartamentoDAOImpl();
 
-    public DepartamentoServicio(DepartamentoDAOImpl departamentoDAO) {
-        this.departamentoDAO = departamentoDAO;
+    public DepartamentoServicio() {
     }
 
     public void agregarDepartamento(Departamento objeto) {

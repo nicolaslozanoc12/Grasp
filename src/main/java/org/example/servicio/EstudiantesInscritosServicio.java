@@ -6,10 +6,9 @@ import org.example.modelo.EstudiantesInscritos;
 import java.util.List;
 
 public class EstudiantesInscritosServicio {
-    private final EstudiantesInscritosDAOImpl estudiantesInscritosDAO;
+    private final EstudiantesInscritosDAOImpl estudiantesInscritosDAO=new EstudiantesInscritosDAOImpl();
 
-    public EstudiantesInscritosServicio(EstudiantesInscritosDAOImpl estudiantesInscritosDAO) {
-        this.estudiantesInscritosDAO = estudiantesInscritosDAO;
+    public EstudiantesInscritosServicio() {
     }
 
     public void agregarEstudiantesInscritos(EstudiantesInscritos objeto) {

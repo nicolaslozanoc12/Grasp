@@ -8,10 +8,9 @@ import org.example.servicio.EstudianteServicio;
 import java.util.List;
 
 public class EstudianteControlador {
-    private final EstudianteServicio estudianteServicio;
+    private final EstudianteServicio estudianteServicio=new EstudianteServicio();
 
-    public EstudianteControlador(EstudianteServicio estudianteServicio) {
-        this.estudianteServicio = estudianteServicio;
+    public EstudianteControlador() {
     }
 
     public void agregarEstudiante(Estudiante objeto) {

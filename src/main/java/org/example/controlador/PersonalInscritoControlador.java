@@ -7,10 +7,9 @@ import org.example.servicio.PersonalInscritoServicio;
 import java.util.List;
 
 public class PersonalInscritoControlador {
-    private final PersonalInscritoServicio personalInscritoServicio;
+    private final PersonalInscritoServicio personalInscritoServicio=new PersonalInscritoServicio();
 
-    public PersonalInscritoControlador(PersonalInscritoServicio personalInscritoServicio) {
-        this.personalInscritoServicio = personalInscritoServicio;
+    public PersonalInscritoControlador() {
     }
 
     public void agregarPersonalInscrito(PersonalInscrito objeto) {
