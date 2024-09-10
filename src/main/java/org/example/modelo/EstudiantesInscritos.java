@@ -4,14 +4,21 @@ import java.util.List;
 
 public class EstudiantesInscritos {
     private int id;
-    private List<Estudiante> estudiantesInscritos;
+    private Estudiante estudiante;
 
-    public EstudiantesInscritos(int id, List<Estudiante> estudiantesInscritos) {
+    public EstudiantesInscritos(int id, Estudiante estudiante) {
         this.id = id;
-        this.estudiantesInscritos = estudiantesInscritos;
+        this.estudiante = estudiante;
     }
 
     public EstudiantesInscritos() {
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public Estudiante getEstudiante() {
+        return estudiante;
+    }
 }

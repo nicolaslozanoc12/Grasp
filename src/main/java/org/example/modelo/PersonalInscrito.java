@@ -4,19 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PersonalInscrito {
-    private List<Persona> listado= new ArrayList<Persona>();
-    public Persona adicionar(Persona persona){
-        listado.add(persona);
-        return persona;
+    private int id;
+    private Empleado Empleado;
+
+    public PersonalInscrito(int id, org.example.modelo.Empleado empleado) {
+        this.id = id;
+        Empleado = empleado;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public org.example.modelo.Empleado getEmpleado() {
+        return Empleado;
     }
 
     public PersonalInscrito() {
 
-    }
-
-    public void imprimirListado(){
-        for(Persona persona: listado){
-            System.out.println(persona.toString());
-        }
     }
 }

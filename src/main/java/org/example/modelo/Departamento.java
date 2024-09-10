@@ -1,8 +1,5 @@
 package org.example.modelo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Departamento{
     private int id;
     private String nombre;

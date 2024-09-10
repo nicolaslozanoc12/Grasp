@@ -1,6 +1,6 @@
 package org.example.modelo;
 
-public class Persona {
+public class Persona implements Todos {
     private int id;
     private final String nombre;
     private final String apellidos;
@@ -13,6 +13,7 @@ public class Persona {
         this.direccion = direccion;
     }
 
+    @Override
     public String informacion() {
         return ", Persona{" +
                 "id=" + id +
@@ -21,6 +22,7 @@ public class Persona {
                 ", direccion=" + direccion.toString() +
                 '}';
     }
+
     @Override
     public String toString(){
         return informacion();
@@ -45,4 +47,6 @@ public class Persona {
     public String getNombre() {
         return nombre;
     }
+
+
 }

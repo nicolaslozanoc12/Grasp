@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 
 public class CargoDAOImpl implements CargoDAO {
     Cargo cargo;
@@ -18,8 +19,8 @@ public class CargoDAOImpl implements CargoDAO {
             preparedStatement.setString(1, objeto.getNombre());
             preparedStatement.executeUpdate();
 
-        }catch (SQLException e){
-            e.printStackTrace();
+        }catch (SQLException exception){
+            logger.log(Level.SEVERE, "error al buscar", exception);
         }
     }
 
@@ -34,8 +35,8 @@ public class CargoDAOImpl implements CargoDAO {
                 String nombreResult=resultSet.getString("nombre");
                 cargo=new Cargo(id,nombreResult);
             }
-        }catch (SQLException e){
-            e.printStackTrace();
+        }catch (SQLException exception){
+            logger.log(Level.SEVERE, "error al buscar", exception);
         }
         return cargo;
     }
@@ -51,8 +52,8 @@ public class CargoDAOImpl implements CargoDAO {
                 String nombreResult=resultSet.getString("nombre");
                 cargo=new Cargo(idResult,nombreResult);
             }
-        }catch (SQLException e){
-            e.printStackTrace();
+        }catch (SQLException exception){
+            logger.log(Level.SEVERE, "error al buscar", exception);
         }
         return cargo;
     }
@@ -69,8 +70,8 @@ public class CargoDAOImpl implements CargoDAO {
                 Cargo cargo=new Cargo(id,nombre);
                 cargos.add(cargo);
             }
-        }catch (SQLException e){
-            e.printStackTrace();
+        }catch (SQLException exception){
+            logger.log(Level.SEVERE, "error al buscar", exception);
         }
         return cargos;
     }
@@ -82,8 +83,8 @@ public class CargoDAOImpl implements CargoDAO {
             preparedStatement.setString(1, objeto.getNombre());
             preparedStatement.setInt(2,id);
             preparedStatement.executeUpdate();
-        }catch (SQLException e){
-            e.printStackTrace();
+        }catch (SQLException exception){
+            logger.log(Level.SEVERE, "error al buscar", exception);
         }
     }
 
@@ -93,8 +94,8 @@ public class CargoDAOImpl implements CargoDAO {
             PreparedStatement preparedStatement=conexion.prepareStatement("DELETE FROM emb.cargos WHERE id = ?");
             preparedStatement.setInt(1,id);
             preparedStatement.executeUpdate();
-        }catch (SQLException e){
-            e.printStackTrace();
+        }catch (SQLException exception){
+            logger.log(Level.SEVERE, "error al buscar", exception);
         }
     }
 }
