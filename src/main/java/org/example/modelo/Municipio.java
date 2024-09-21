@@ -9,6 +9,12 @@ public class Municipio {
         this.nombre = nombre;
         this.departamento = departamento;
     }
+
+    public Municipio(String nombre, Departamento departamento) {
+        this.nombre = nombre;
+        this.departamento = departamento;
+    }
+
     public int getId() {
         return id;
     }

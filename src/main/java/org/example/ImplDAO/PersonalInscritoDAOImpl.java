@@ -18,7 +18,7 @@ public class PersonalInscritoDAOImpl implements PersonalInscritoDAO {
     @Override
     public void insertar(PersonalInscrito objeto) {
         try{
-            String sentenciaInsertarPersonalInscritos="INSER INTO emb.personalinscrito (id,id_empleado) VALUES (?,?)";
+            String sentenciaInsertarPersonalInscritos="INSERT INTO emb.personalinscrito (id,id_empleado) VALUES (?,?)";
             PreparedStatement preparedStatement=conexion.prepareStatement(sentenciaInsertarPersonalInscritos);
             preparedStatement.setInt(1,objeto.getId());
             preparedStatement.setInt(2, objeto.getEmpleado().getId());
@@ -93,7 +93,7 @@ public class PersonalInscritoDAOImpl implements PersonalInscritoDAO {
     @Override
     public void actualizar(PersonalInscrito objeto, int id) {
         try {
-            PreparedStatement preparedStatement = conexion.prepareStatement("UPDATE * FROM emb.personalinscrito  SET id = ?, is_empleado = ? WHERE id = ?");
+            PreparedStatement preparedStatement = conexion.prepareStatement("UPDATE * FROM emb.personalinscrito  SET id = ?, id_empleado = ? WHERE id = ?");
             preparedStatement.setInt(1, objeto.getId());
             preparedStatement.setInt(2, objeto.getEmpleado().getId());
             preparedStatement.setInt(3, id);

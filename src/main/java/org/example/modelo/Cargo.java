@@ -9,6 +9,7 @@ public class Cargo implements Todos{
         this.nombre = nombre;
     }
 
+
     @Override
     public String toString() {
         return "Cargo{" +

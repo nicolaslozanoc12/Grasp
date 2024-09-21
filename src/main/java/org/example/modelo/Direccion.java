@@ -1,7 +1,7 @@
 package org.example.modelo;
 
 public class Direccion {
-    private final int id;
+    private int id;
     private final Municipio municipio;
     private final Departamento departamento;
     private final Pais pais;
@@ -20,6 +20,7 @@ public class Direccion {
         this.coordenada = coordenada;
         this.descripcion = descripcion;
     }
+
 
     public int getId() {
         return id;

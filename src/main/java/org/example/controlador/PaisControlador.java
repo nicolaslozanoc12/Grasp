@@ -9,39 +9,34 @@ import java.util.List;
 
 
 public class PaisControlador {
-    private final Servicio<Pais> paisServicio;
+
+    PaisDAOImpl paisDAO=new PaisDAOImpl();
 
     public PaisControlador() {
-        PaisDAOImpl paisDAO=new PaisDAOImpl();
-        this.paisServicio=new PaisServicioImpl(paisDAO);
     }
-
-    public void agregarPais(Pais objeto) {
-        paisServicio.agregar(objeto);
+    public void agregarPais(String nombrePais) {
+        paisDAO.insertar(new Pais(nombrePais));
     }
-
     public void listarPaises() {
-        List<Pais> paises = paisServicio.listarTodos();
+        List<Pais> paises = paisDAO.buscarTodos();
         for (Pais pais : paises) {
             System.out.printf("Id: %d Nombre: %s",
                     pais.getId(),
                     pais.getNombre());
         }
     }
-
-    public Pais obtenerPaisPorId(int id) {
-        return paisServicio.obtenerPorId(id);
+    public void obtenerPaisPorId(int id) {
+        Pais pais = paisDAO.buscarPorId(id);
+        System.out.printf("Id: %d , nombre: %s",pais.getId(),pais.getNombre());
     }
-
-    public Pais obtenerPaisPorNombre(String nombre) {
-        return paisServicio.obtenerPorNombre(nombre);
+    public void obtenerPaisPorNombre(String nombre) {
+        Pais pais = paisDAO.buscarPorNombre(nombre);
+        System.out.printf("Id: %d , nombre: %s",pais.getId(),pais.getNombre());
     }
-
-    public void actualizarPais(Pais objeto, int id) {
-        paisServicio.actualizar(objeto, id);
+    public void actualizarPais(String nombre, int id) {
+        paisDAO.actualizar(new Pais(nombre), id);
     }
-
     public void eliminarPais(int id) {
-        paisServicio.eliminar(id);
+        paisDAO.eliminar(id);
     }
 }

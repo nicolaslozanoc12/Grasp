@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 public class EmpleadoDAOImpl implements EmpleadoDAO {
-    CargoDAOImpl cargoDAO=new CargoDAOImpl();
+    CargoBaseDeDatos cargoDAO=new CargoBaseDeDatos();
     PersonalDAOImpl personalDAO=new PersonalDAOImpl();
 
     @Override
@@ -46,7 +46,7 @@ public class EmpleadoDAOImpl implements EmpleadoDAO {
             if (resultSet.next()) {
                 int idCargo=resultSet.getInt("id_cargo");
                 double salario=resultSet.getDouble("salario");
-                int idPersona=resultSet.getInt("personas_id");
+                int idPersona=resultSet.getInt("id_persona");
                 Persona persona= personalDAO.buscarPorId(idPersona);
                 Cargo cargo= cargoDAO.buscarPorId(idCargo);
                 empleado=new Empleado(id,persona.getNombre(),persona.getApellidos(),persona.getDireccion(),cargo,salario);

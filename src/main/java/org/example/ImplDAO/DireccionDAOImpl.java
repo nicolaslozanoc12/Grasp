@@ -21,6 +21,7 @@ public class DireccionDAOImpl implements DireccionDAO {
     public void insertar(Direccion objeto) {
         try{
             PreparedStatement preparedStatement=conexion.prepareStatement("INSERT INTO emb.direcciones (id_pais,id_departamento,id_municipio,calle,carrera,coordenada,descripcion) VALUES (?,?,?,?,?,?,?)");
+            preparedStatement.setInt(1,objeto.getPais().getId());
             preparedStatement.setInt(2,objeto.getDepartamento().getId());
             preparedStatement.setInt(3,objeto.getMunicipio().getId());
             preparedStatement.setString(4,objeto.getCalle());

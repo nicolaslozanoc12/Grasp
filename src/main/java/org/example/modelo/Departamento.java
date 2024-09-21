@@ -10,7 +10,6 @@ public class Departamento{
         this.nombre = nombre;
         this.pais=pais;
     }
-
     public Departamento() {
     }
 

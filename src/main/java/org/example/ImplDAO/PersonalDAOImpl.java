@@ -60,7 +60,7 @@ public class PersonalDAOImpl implements PersonalDAO {
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 int id = resultSet.getInt("id");
-                String apellido = resultSet.getString("apellido");
+                String apellido = resultSet.getString("apellidos");
                 int idDireccion = resultSet.getInt("id_direccion");
                 Direccion direccion = direccionDAO.buscarPorId(idDireccion);
                 persona = new Persona(id, nombre, apellido, direccion);
@@ -82,7 +82,7 @@ public class PersonalDAOImpl implements PersonalDAO {
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 String nombre = resultSet.getString("nombre");
-                String apellido = resultSet.getString("apellido");
+                String apellido = resultSet.getString("apellidos");
                 int idDireccion = resultSet.getInt("id_direccion");
                 Direccion direccion = direccionDAO.buscarPorId(idDireccion);
                 persona = new Persona(id, nombre, apellido, direccion);
@@ -98,7 +98,7 @@ public class PersonalDAOImpl implements PersonalDAO {
     public List<Persona> buscarTodos() {
         List<Persona> personas = new ArrayList<>();
         try {
-            PreparedStatement preparedStatement = conexion.prepareStatement("SELECT * FROM emb.personales WHERE id=?");
+            PreparedStatement preparedStatement = conexion.prepareStatement("SELECT * FROM emb.personales");
             ResultSet personasResult=preparedStatement.executeQuery();
             while(personasResult.next()){
                 int id=personasResult.getInt("id");

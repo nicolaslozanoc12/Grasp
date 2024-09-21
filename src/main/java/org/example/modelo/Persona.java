@@ -12,6 +12,11 @@ public class Persona implements Todos {
         this.apellidos = apellidos;
         this.direccion = direccion;
     }
+    public Persona(String nombre, String apellidos, Direccion direccion) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.direccion = direccion;
+    }
 
     @Override
     public String informacion() {
@@ -22,6 +27,8 @@ public class Persona implements Todos {
                 ", direccion=" + direccion.toString() +
                 '}';
     }
+
+
 
     @Override
     public String toString(){

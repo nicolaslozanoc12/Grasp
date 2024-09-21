@@ -13,7 +13,7 @@ public class ConexionDatabase {
     public String urlDB = "jdbc:h2:./base";
     public String Driver_DB = "org.h2.Driver";
 
-    public Connection getConectionDataBaseH2(){
+    public Connection getConectionDataBase(){
         Connection connection = null;
         try {
             Class.forName(Driver_DB);

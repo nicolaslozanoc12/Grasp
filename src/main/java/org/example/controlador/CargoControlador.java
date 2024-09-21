@@ -1,6 +1,6 @@
 package org.example.controlador;
 
-import org.example.ImplDAO.CargoDAOImpl;
+import org.example.ImplDAO.CargoBaseDeDatos;
 import org.example.modelo.Cargo;
 import org.example.servicio.Impl.CargoServicioImpl;
 import org.example.servicio.Interfaz.Servicio;
@@ -11,7 +11,7 @@ public class CargoControlador {
    private final Servicio<Cargo> cargoServicio;
 
     public CargoControlador() {
-        CargoDAOImpl cargoDAO=new CargoDAOImpl();
+        CargoBaseDeDatos cargoDAO=new CargoBaseDeDatos();
         this.cargoServicio=new CargoServicioImpl(cargoDAO);
     }
 

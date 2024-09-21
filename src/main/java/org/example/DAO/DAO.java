@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 public interface DAO<T> {
     ConexionDatabase conexionDatabase = new ConexionDatabase();
-    Connection conexion = conexionDatabase.getConectionDataBaseH2();
+    Connection conexion = conexionDatabase.getConectionDataBase();
     Logger logger = Logger.getLogger(ConexionDatabase.class.getName());
     void insertar(T objeto);
     T buscarPorNombre(String nombre);

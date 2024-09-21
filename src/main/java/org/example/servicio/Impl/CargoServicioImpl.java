@@ -1,7 +1,6 @@
 package org.example.servicio.Impl;
 
 import org.example.DAO.CargoDAO;
-import org.example.ImplDAO.CargoDAOImpl;
 import org.example.modelo.Cargo;
 import org.example.servicio.Interfaz.CargoServicio;
 

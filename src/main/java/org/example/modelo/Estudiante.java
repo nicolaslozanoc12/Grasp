@@ -13,6 +13,13 @@ public class Estudiante extends Persona{
         this.promedio = promedio;
     }
 
+    public Estudiante(String nombre, String apellidos, Direccion direccion, String codigo, String programa, Double promedio) {
+        super(nombre, apellidos, direccion);
+        this.codigo = codigo;
+        this.programa = programa;
+        this.promedio = promedio;
+    }
+
     @Override
     public String toString() {
         return "Estudiante{" +

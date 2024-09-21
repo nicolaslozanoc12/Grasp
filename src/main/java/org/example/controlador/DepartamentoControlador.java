@@ -2,44 +2,50 @@ package org.example.controlador;
 
 import org.example.DAO.DepartamentoDAO;
 import org.example.ImplDAO.DepartamentoDAOImpl;
+import org.example.ImplDAO.PaisDAOImpl;
 import org.example.modelo.Departamento;
+import org.example.modelo.Pais;
 import org.example.servicio.Impl.DepartamentoServicioImpl;
 import org.example.servicio.Interfaz.Servicio;
 
 import java.util.List;
 
 public class DepartamentoControlador {
-    private final Servicio<Departamento> departamentoServicio;
+    DepartamentoDAO departamentoDAO;
+    PaisDAOImpl paisDAO = new PaisDAOImpl();
 
     public DepartamentoControlador() {
-        DepartamentoDAOImpl departamentoDAO=new DepartamentoDAOImpl();
-       this.departamentoServicio=new DepartamentoServicioImpl(departamentoDAO);
     }
 
-    public void agregarDepartamento(Departamento objeto) {
-        departamentoServicio.agregar(objeto);
+    public void agregarDepartamento(String nombreDepartamento,String nombrePais) {
+        Pais pais = paisDAO.buscarPorNombre(nombrePais);
+        departamentoDAO.insertar(new Departamento(0,nombreDepartamento,pais));
     }
 
     public void listarDepartamentos() {
-        List<Departamento> departamentos = departamentoServicio.listarTodos();
+        List<Departamento> departamentos = departamentoDAO.buscarTodos();
         for (Departamento departamento : departamentos) {
-            System.out.println("Id: " + departamento.getId() + " Nombre: " + departamento.getNombre() + " Pais: " + departamento.getPais());
+            System.out.println("Id: " + departamento.getId() + " Nombre: " + departamento.getNombre() + " Pais: " + departamento.getPais().getNombre());
         }
     }
 
-    public Departamento obtenerDepartamentoPorId(int id) {
-        return departamentoServicio.obtenerPorId(id);
+    public void obtenerDepartamentoPorId(int id) {
+        Departamento departamento= departamentoDAO.buscarPorId(id);
+        System.out.printf("Id: %d , nombre: %s, pais : %s",departamento.getId(),departamento.getNombre(),departamento.getPais().getNombre());
     }
 
-    public Departamento obtenerDepartamentoPorNombre(String nombre) {
-        return departamentoServicio.obtenerPorNombre(nombre);
+    public void obtenerDepartamentoPorNombre(String nombre) {
+        Departamento departamento = departamentoDAO.buscarPorNombre(nombre);
+        System.out.printf("Id: %d , nombre: %s , pais : %s",departamento.getId(),departamento.getNombre(),departamento.getPais().getNombre());
     }
 
-    public void actualizarDepartamento(Departamento objeto, int id) {
-        departamentoServicio.actualizar(objeto, id);
+    public void actualizarDepartamento(String nombreDepartamento,String nombrePais, int id) {
+        Pais pais = paisDAO.buscarPorNombre(nombrePais);
+        Departamento departamento = new Departamento(id,nombreDepartamento,pais);
+        departamentoDAO.actualizar(departamento,id);
     }
 
     public void eliminarDepartamento(int id) {
-        departamentoServicio.eliminar(id);
+        int id1 = id;
     }
 }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class CargoDAOImpl implements CargoDAO {
+public class CargoBaseDeDatos implements CargoDAO {
     Cargo cargo;
     @Override
     public void insertar(Cargo objeto) {

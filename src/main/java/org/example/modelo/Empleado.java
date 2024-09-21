@@ -5,12 +5,11 @@ public class Empleado extends Persona {
     private Double salario;
 
 
-    public Empleado(int id,String nombre, String apellidos, Direccion direccion,Cargo cargo, Double salario) {
-        super(id,nombre, apellidos, direccion);
+    public Empleado(int id, String nombre, String apellidos, Direccion direccion, Cargo cargo, Double salario) {
+        super(id, nombre, apellidos, direccion);
         this.cargo = cargo;
         this.salario = salario;
     }
-
 
     @Override
     public String toString(){
