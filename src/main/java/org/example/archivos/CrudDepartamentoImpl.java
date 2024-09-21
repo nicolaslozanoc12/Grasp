@@ -13,12 +13,12 @@ public class CrudDepartamentoImpl implements CrudDepartamento {
     private static final String FILE_NAME = "departamentos.txt";
     private final CrudPais crudPais = new CrudPaisImpl();
     @Override
-    public void crear(Departamento objeto) {
+    public void insertar(Departamento objeto) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
             writer.write(objeto.getId() + "," + objeto.getNombre() + "," + objeto.getPais().getId());
             writer.newLine();
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
     }
 
@@ -33,7 +33,7 @@ public class CrudDepartamentoImpl implements CrudDepartamento {
                 departamentos.add(new Departamento(Integer.parseInt(parts[0]), parts[1], pais));
             }
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
         return departamentos;
     }
@@ -50,7 +50,7 @@ public class CrudDepartamentoImpl implements CrudDepartamento {
                 }
             }
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
         return null;
     }
@@ -68,7 +68,7 @@ public class CrudDepartamentoImpl implements CrudDepartamento {
                 }
             }
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
         return null;
     }
@@ -89,7 +89,7 @@ public class CrudDepartamentoImpl implements CrudDepartamento {
                 }
             }
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
 
         insertarLista(departamentos);
@@ -109,7 +109,7 @@ public class CrudDepartamentoImpl implements CrudDepartamento {
                 }
             }
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());;
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());;
         }
 
         insertarLista(departamentos);
@@ -123,7 +123,7 @@ public class CrudDepartamentoImpl implements CrudDepartamento {
                 writer.newLine();
             }
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
     }
 }

@@ -12,7 +12,7 @@ public class CrudMunicipioImpl implements CrudMunicipio {
     private static final String FILE_NAME = "municipios.txt";
     private final CrudDepartamento crudDepartamento = new CrudDepartamentoImpl();
     @Override
-    public void crear(Municipio objeto) {
+    public void insertar(Municipio objeto) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
             writer.write(objeto.getId() + "," + objeto.getNombre() + "," + objeto.getDepartamento().getId());
             writer.newLine();

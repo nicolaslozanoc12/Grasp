@@ -11,12 +11,12 @@ import java.util.logging.Level;
 public class CrudPaisImpl implements CrudPais {
     private static final String FILE_PAIS = "paises.txt";
     @Override
-    public void crear(Pais objeto) {
+    public void insertar(Pais objeto) {
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PAIS,true))){
             writer.write(objeto.getId() + "," + objeto.getNombre());
             writer.newLine();
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
     }
 
@@ -30,7 +30,7 @@ public class CrudPaisImpl implements CrudPais {
                 paises.add(new Pais(Integer.parseInt(campos[0]), campos[1]));
             }
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error al buscar todos los paises", e);
+            logger.log(Level.SEVERE, "Error al buscar todos los paises", e);
         }
         return paises;
     }
@@ -46,7 +46,7 @@ public class CrudPaisImpl implements CrudPais {
                 }
             }
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
         return null;
     }
@@ -63,7 +63,7 @@ public class CrudPaisImpl implements CrudPais {
             }
         }
         catch(IOException e){
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
         return null;
     }
@@ -82,7 +82,7 @@ public class CrudPaisImpl implements CrudPais {
                 }
             }
         }catch (IOException e){
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
         InsertarListaNueva(paises);
     }
@@ -99,7 +99,7 @@ public class CrudPaisImpl implements CrudPais {
                 }
             }
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
         InsertarListaNueva(paises);
 
@@ -112,7 +112,7 @@ public class CrudPaisImpl implements CrudPais {
                 writer.newLine();
             }
         } catch (IOException e) {
-            LOGGER.log(Level.SEVERE, "Error: ", e.getMessage());
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
     }
 }

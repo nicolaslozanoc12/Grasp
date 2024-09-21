@@ -4,36 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="Algunas clases completas de DAO">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudDepartamento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudMunicipio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudPais.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDepartamentoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudMunicipioImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPaisImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="falta completar el crud de archivos y que el crud en base de dato sea la implentacion de crud en general">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/base.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/base.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DAO/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DAO/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/DireccionDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/DireccionDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EmpleadoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EmpleadoDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalInscritoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalInscritoDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/conexion/ConexionDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/conexion/ConexionDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/DepartamentoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controlador/DepartamentoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/PaisControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controlador/PaisControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Cargo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Cargo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Departamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Departamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Direccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Direccion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Estudiante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Municipio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Municipio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Pais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Pais.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PaisDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PaisDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDepartamentoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDepartamentoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPaisImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPaisImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +121,7 @@
       <workItem from="1726602166940" duration="5084000" />
       <workItem from="1726720470231" duration="6874000" />
       <workItem from="1726787009589" duration="5814000" />
-      <workItem from="1726857519068" duration="11130000" />
+      <workItem from="1726857519068" duration="12316000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion proyecto con documentos">
       <option name="closed" value="true" />
@@ -171,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725766208893</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="falta completar el crud de archivos y que el crud en base de dato sea la implentacion de crud en general">
+      <option name="closed" value="true" />
+      <created>1726926891175</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726926891175</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +176,7 @@
     <MESSAGE value="Creacion proyecto con documentos" />
     <MESSAGE value="se sube todo el modelo de negocio" />
     <MESSAGE value="Algunas clases completas de DAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Algunas clases completas de DAO" />
+    <MESSAGE value="falta completar el crud de archivos y que el crud en base de dato sea la implentacion de crud en general" />
+    <option name="LAST_COMMIT_MESSAGE" value="falta completar el crud de archivos y que el crud en base de dato sea la implentacion de crud en general" />
   </component>
 </project>

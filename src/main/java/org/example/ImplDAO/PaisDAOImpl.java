@@ -1,5 +1,6 @@
 package org.example.ImplDAO;
 
+import org.example.CrudInterfaz.CrudPais;
 import org.example.DAO.PaisDAO;
 import org.example.modelo.Pais;
 
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class PaisDAOImpl implements PaisDAO {
+public class PaisDAOImpl implements CrudPais {
 
     public PaisDAOImpl() {
     }
@@ -23,7 +24,7 @@ public class PaisDAOImpl implements PaisDAO {
             preparedStatement.setString(1,objeto.getNombre());
             preparedStatement.executeUpdate();
         }catch (SQLException exception){
-            logger.log(Level.SEVERE, "error al crear", exception);
+            logger.log(Level.SEVERE, "error al insertar", exception);
         }
 
     }
