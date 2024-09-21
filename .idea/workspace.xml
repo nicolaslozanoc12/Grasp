@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="pequeños cambios en crud y en PaisDAOImpl">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDireccionArchivo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPersonalArchivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="creacion de crud de archivos direecion y persona">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEstudianteArchivo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudDepartamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudDepartamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudMunicipio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudMunicipio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudPais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudPais.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudPersona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudPersona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EmpleadoBaseDeDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EmpleadoBaseDeDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EstudianteBaseDeDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EstudianteBaseDeDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalBaseDeDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalBaseDeDatos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726928043726</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="creacion de crud de archivos direecion y persona">
+      <option name="closed" value="true" />
+      <created>1726936816366</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726936816366</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +194,7 @@
     <MESSAGE value="Algunas clases completas de DAO" />
     <MESSAGE value="falta completar el crud de archivos y que el crud en base de dato sea la implentacion de crud en general" />
     <MESSAGE value="pequeños cambios en crud y en PaisDAOImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="pequeños cambios en crud y en PaisDAOImpl" />
+    <MESSAGE value="creacion de crud de archivos direecion y persona" />
+    <option name="LAST_COMMIT_MESSAGE" value="creacion de crud de archivos direecion y persona" />
   </component>
 </project>
