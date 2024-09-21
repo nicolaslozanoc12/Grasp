@@ -1,21 +1,21 @@
 package org.example.archivos;
 import java.io.*;
 import org.example.CrudInterfaz.CrudDepartamento;
-import org.example.CrudInterfaz.CrudPais;
+import org.example.CrudInterfaz.CrudMunicipio;
 import org.example.modelo.Departamento;
-import org.example.modelo.Pais;
+import org.example.modelo.Municipio;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class CrudDepartamentoImpl implements CrudDepartamento {
-    private static final String FILE_NAME = "departamentos.txt";
-    private final CrudPais crudPais = new CrudPaisImpl();
+public class CrudMunicipioArchivo implements CrudMunicipio {
+    private static final String FILE_NAME = "municipios.txt";
+    private final CrudDepartamento crudDepartamento = new CrudDepartamentoArchivo();
     @Override
-    public void insertar(Departamento objeto) {
+    public void insertar(Municipio objeto) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
-            writer.write(objeto.getId() + "," + objeto.getNombre() + "," + objeto.getPais().getId());
+            writer.write(objeto.getId() + "," + objeto.getNombre() + "," + objeto.getDepartamento().getId());
             writer.newLine();
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Error: ", e.getMessage());
@@ -23,30 +23,30 @@ public class CrudDepartamentoImpl implements CrudDepartamento {
     }
 
     @Override
-    public List<Departamento> buscarTodos() {
-        List<Departamento> departamentos = new ArrayList<>();
+    public List<Municipio> buscarTodos() {
+        List<Municipio> municipios = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
-                Pais pais = crudPais.buscarPorId(Integer.parseInt(parts[2]));
-                departamentos.add(new Departamento(Integer.parseInt(parts[0]), parts[1], pais));
+                Departamento departamento = crudDepartamento.buscarPorId(Integer.parseInt(parts[2]));
+                municipios.add(new Municipio(Integer.parseInt(parts[0]), parts[1], departamento));
             }
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
-        return departamentos;
+        return municipios;
     }
 
     @Override
-    public Departamento buscarPorNombre(String nombre) {
+    public Municipio buscarPorNombre(String nombre) {
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (parts[1].equalsIgnoreCase(nombre)) {
-                    Pais pais = crudPais.buscarPorId(Integer.parseInt(parts[2]));
-                    return new Departamento(Integer.parseInt(parts[0]), parts[1], pais);
+                    Departamento departamento = crudDepartamento.buscarPorId(Integer.parseInt(parts[2]));
+                    return new Municipio(Integer.parseInt(parts[0]), parts[1], departamento);
                 }
             }
         } catch (IOException e) {
@@ -57,14 +57,14 @@ public class CrudDepartamentoImpl implements CrudDepartamento {
 
 
     @Override
-    public Departamento buscarPorId(int id) {
+    public Municipio buscarPorId(int id) {
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (Integer.parseInt(parts[0]) == id) {
-                    Pais pais = crudPais.buscarPorId(Integer.parseInt(parts[2]));
-                    return new Departamento(id, parts[1], pais);
+                    Departamento departamento = crudDepartamento.buscarPorId(Integer.parseInt(parts[2]));
+                    return new Municipio(id, parts[1], departamento);
                 }
             }
         } catch (IOException e) {
@@ -74,56 +74,57 @@ public class CrudDepartamentoImpl implements CrudDepartamento {
     }
 
     @Override
-    public void actualizar(Departamento objeto, int id) {
-        List<Departamento> departamentos = new ArrayList<>();
+    public void actualizar(Municipio objeto, int id) {
+        List<Municipio> municipios = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 int idAhora = Integer.parseInt(parts[0]);
                 if (idAhora == id) {
-                    departamentos.add(objeto);
+                    municipios.add(objeto);
                 } else {
-                    Pais pais = crudPais.buscarPorId(Integer.parseInt(parts[2]));
-                    departamentos.add(new Departamento(id, parts[1], pais));
+                    Departamento departamento = crudDepartamento.buscarPorId(Integer.parseInt(parts[2]));
+                    municipios.add(new Municipio(id, parts[1], departamento));
                 }
             }
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
 
-        insertarLista(departamentos);
+        InsertarListaMunicipio(municipios);
 
     }
 
     @Override
     public void eliminar(int id) {
-        List<Departamento> departamentos = new ArrayList<>();
+        List<Municipio> municipios = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (Integer.parseInt(parts[0]) != id) {
-                    Pais pais = crudPais.buscarPorId(Integer.parseInt(parts[2]));
-                    departamentos.add(new Departamento(Integer.parseInt(parts[0]), parts[1], pais));
+                    Departamento departamento = crudDepartamento.buscarPorId(Integer.parseInt(parts[2]));
+                    municipios.add(new Municipio(Integer.parseInt(parts[0]), parts[1], departamento));
                 }
             }
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Error: ", e.getMessage());;
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
 
-        insertarLista(departamentos);
-
+        InsertarListaMunicipio(municipios);
     }
 
-    public void insertarLista(List<Departamento> departamentos) {
+    private void InsertarListaMunicipio(List<Municipio> municipios) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME))) {
-            for (Departamento d : departamentos) {
-                writer.write(d.getId() + "," + d.getNombre() + "," + d.getPais().getId());
+            for (Municipio m : municipios) {
+                writer.write(m.getId() + "," + m.getNombre() + "," + m.getDepartamento().getId());
                 writer.newLine();
             }
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
     }
+
 }
+

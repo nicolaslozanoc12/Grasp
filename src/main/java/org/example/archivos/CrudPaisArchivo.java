@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class CrudPaisImpl implements CrudPais {
+public class CrudPaisArchivo implements CrudPais {
     private static final String FILE_PAIS = "paises.txt";
     @Override
     public void insertar(Pais objeto) {
@@ -84,7 +84,7 @@ public class CrudPaisImpl implements CrudPais {
         }catch (IOException e){
             logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
-        InsertarListaNueva(paises);
+        InsertarListaPais(paises);
     }
 
     @Override
@@ -101,11 +101,11 @@ public class CrudPaisImpl implements CrudPais {
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
-        InsertarListaNueva(paises);
+        InsertarListaPais(paises);
 
     }
 
-     public void InsertarListaNueva(List<Pais> paises) {
+     private void InsertarListaPais(List<Pais> paises) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PAIS))) {
             for (Pais p : paises) {
                 writer.write(p.getId() + "," + p.getNombre());
