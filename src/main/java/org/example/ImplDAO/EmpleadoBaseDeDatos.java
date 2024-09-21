@@ -1,6 +1,6 @@
 package org.example.ImplDAO;
 
-import org.example.DAO.EmpleadoDAO;
+import org.example.CrudInterfaz.CrudEmpleado;
 import org.example.modelo.Cargo;
 import org.example.modelo.Empleado;
 import org.example.modelo.Persona;
@@ -12,9 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class EmpleadoDAOImpl implements EmpleadoDAO {
+public class EmpleadoBaseDeDatos implements CrudEmpleado {
     CargoBaseDeDatos cargoDAO=new CargoBaseDeDatos();
-    PersonalDAOImpl personalDAO=new PersonalDAOImpl();
+    PersonalBaseDeDatos personalDAO=new PersonalBaseDeDatos();
 
     @Override
     public void insertar(Empleado objeto) {

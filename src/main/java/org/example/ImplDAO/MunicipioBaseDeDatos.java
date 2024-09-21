@@ -1,6 +1,6 @@
 package org.example.ImplDAO;
 
-import org.example.DAO.MunicipioDAO;
+import org.example.CrudInterfaz.CrudMunicipio;
 import org.example.modelo.Departamento;
 import org.example.modelo.Municipio;
 
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class MunicipioDAOImpl implements MunicipioDAO {
+public class MunicipioBaseDeDatos implements CrudMunicipio {
     @Override
     public void insertar(Municipio objeto) {
         try {
@@ -35,7 +35,7 @@ public class MunicipioDAOImpl implements MunicipioDAO {
                 int idMunicipio = resultSet.getInt("id");
                 String nombreMunicipio = resultSet.getString("nombre");
                 int departamentoId = resultSet.getInt("id_departamento");
-                DepartamentoDAOImpl departamentoDAO = new DepartamentoDAOImpl();
+                DepartamentoBaseDeDatos departamentoDAO = new DepartamentoBaseDeDatos();
                 Departamento departamento = departamentoDAO.buscarPorId(departamentoId);
                 municipio = new Municipio(idMunicipio,nombreMunicipio, departamento);
             }
@@ -56,7 +56,7 @@ public class MunicipioDAOImpl implements MunicipioDAO {
                 int idMunicipio = resultSet.getInt("id");
                 String nombreMunicipio = resultSet.getString("nombre");
                 int departamentoId = resultSet.getInt("id_departamento");
-                DepartamentoDAOImpl departamentoDAO = new DepartamentoDAOImpl();
+                DepartamentoBaseDeDatos departamentoDAO = new DepartamentoBaseDeDatos();
                 Departamento departamento = departamentoDAO.buscarPorId(departamentoId);
                 municipio = new Municipio(idMunicipio,nombreMunicipio, departamento);
             }
@@ -76,7 +76,7 @@ public class MunicipioDAOImpl implements MunicipioDAO {
                 int id = municipioSet.getInt("id");
                 String nombre = municipioSet.getString("nombre");
                 int idDepartamento = municipioSet.getInt("id_departamento");
-                DepartamentoDAOImpl departamentoDAO = new DepartamentoDAOImpl();
+                DepartamentoBaseDeDatos departamentoDAO = new DepartamentoBaseDeDatos();
                 Departamento departamento = departamentoDAO.buscarPorId(idDepartamento);
                 Municipio municipio = new Municipio(id,nombre,departamento);
                 municipios.add(municipio);

@@ -1,7 +1,6 @@
 package org.example.ImplDAO;
 
 import org.example.CrudInterfaz.CrudPais;
-import org.example.DAO.PaisDAO;
 import org.example.modelo.Pais;
 
 import java.sql.PreparedStatement;
@@ -11,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class PaisDAOImpl implements CrudPais {
+public class PaisBaseDeDatos implements CrudPais {
 
-    public PaisDAOImpl() {
+    public PaisBaseDeDatos() {
     }
 
     @Override

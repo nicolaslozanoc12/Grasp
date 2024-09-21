@@ -1,16 +1,14 @@
 package org.example.controlador;
 
-import org.example.ImplDAO.PaisDAOImpl;
+import org.example.ImplDAO.PaisBaseDeDatos;
 import org.example.modelo.Pais;
-import org.example.servicio.Impl.PaisServicioImpl;
-import org.example.servicio.Interfaz.Servicio;
 
 import java.util.List;
 
 
 public class PaisControlador {
 
-    PaisDAOImpl paisDAO=new PaisDAOImpl();
+    PaisBaseDeDatos paisDAO=new PaisBaseDeDatos();
 
     public PaisControlador() {
     }

@@ -1,9 +1,8 @@
 package org.example.controlador;
 
-import org.example.ImplDAO.EstudianteDAOImpl;
+import org.example.ImplDAO.EstudianteBaseDeDatos;
 import org.example.modelo.Estudiante;
 import org.example.servicio.Impl.EstudianteServicioImpl;
-import org.example.servicio.Interfaz.EstudianteServicio;
 import org.example.servicio.Interfaz.Servicio;
 
 import java.util.List;
@@ -12,7 +11,7 @@ public class EstudianteControlador {
     private final Servicio<Estudiante> estudianteServicio;
 
     public EstudianteControlador() {
-        EstudianteDAOImpl estudianteDAO=new EstudianteDAOImpl();
+        EstudianteBaseDeDatos estudianteDAO=new EstudianteBaseDeDatos();
         this.estudianteServicio=new EstudianteServicioImpl(estudianteDAO);
     }
 

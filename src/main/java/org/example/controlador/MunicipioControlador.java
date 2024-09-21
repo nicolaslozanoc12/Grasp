@@ -1,6 +1,6 @@
 package org.example.controlador;
 
-import org.example.ImplDAO.MunicipioDAOImpl;
+import org.example.ImplDAO.MunicipioBaseDeDatos;
 import org.example.modelo.Municipio;
 import org.example.servicio.Impl.MunicipioServicioImpl;
 import org.example.servicio.Interfaz.Servicio;
@@ -11,7 +11,7 @@ public class MunicipioControlador {
     private final Servicio<Municipio> municipioServicio;
 
     public MunicipioControlador() {
-        MunicipioDAOImpl municipioDAO=new MunicipioDAOImpl();
+        MunicipioBaseDeDatos municipioDAO=new MunicipioBaseDeDatos();
         this.municipioServicio=new MunicipioServicioImpl(municipioDAO);
     }
 

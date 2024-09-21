@@ -1,9 +1,7 @@
 package org.example.controlador;
 
-import org.example.DAO.PersonalDAO;
-import org.example.ImplDAO.PersonalDAOImpl;
+import org.example.ImplDAO.PersonalBaseDeDatos;
 import org.example.modelo.Persona;
-import org.example.servicio.Impl.PersonalServicio;
 import org.example.servicio.Impl.PersonalServicioImpl;
 import org.example.servicio.Interfaz.Servicio;
 
@@ -13,7 +11,7 @@ public class PersonalControlador {
     private final Servicio<Persona> personalServicio;
 
     public PersonalControlador() {
-        PersonalDAOImpl personalDAO=new PersonalDAOImpl();
+        PersonalBaseDeDatos personalDAO=new PersonalBaseDeDatos();
         this.personalServicio=new PersonalServicioImpl(personalDAO);
     }
 

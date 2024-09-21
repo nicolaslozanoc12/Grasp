@@ -1,9 +1,7 @@
 package org.example.ImplDAO;
 
-import org.example.DAO.PersonalInscritoDAO;
+import org.example.CrudInterfaz.CrudPersonalInscrito;
 import org.example.modelo.Empleado;
-import org.example.modelo.Estudiante;
-import org.example.modelo.EstudiantesInscritos;
 import org.example.modelo.PersonalInscrito;
 
 import java.sql.PreparedStatement;
@@ -13,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class PersonalInscritoDAOImpl implements PersonalInscritoDAO {
-    EmpleadoDAOImpl empleadoDAO=new EmpleadoDAOImpl();
+public class PersonalInscritoBaseDeDatos implements CrudPersonalInscrito {
+    EmpleadoBaseDeDatos empleadoDAO=new EmpleadoBaseDeDatos();
     @Override
     public void insertar(PersonalInscrito objeto) {
         try{

@@ -1,6 +1,6 @@
 package org.example.ImplDAO;
 
-import org.example.DAO.EstudianteDAO;
+import org.example.CrudInterfaz.CrudEstudiante;
 import org.example.modelo.Direccion;
 import org.example.modelo.Estudiante;
 
@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class EstudianteDAOImpl implements EstudianteDAO {
-    private final PersonalDAOImpl personalDAO = new PersonalDAOImpl();
-    private final DireccionDAOImpl direccionDAO = new DireccionDAOImpl();
+public class EstudianteBaseDeDatos implements CrudEstudiante {
+    private final PersonalBaseDeDatos personalDAO = new PersonalBaseDeDatos();
+    private final DireccionBaseDeDatos direccionDAO = new DireccionBaseDeDatos();
     @Override
     public void insertar(Estudiante objeto) {
         try{

@@ -1,6 +1,6 @@
 package org.example.controlador;
 
-import org.example.ImplDAO.DireccionDAOImpl;
+import org.example.ImplDAO.DireccionBaseDeDatos;
 import org.example.modelo.Direccion;
 import org.example.servicio.Impl.DireccionServicioImpl;
 import org.example.servicio.Interfaz.Servicio;
@@ -11,7 +11,7 @@ public class DireccionControlador {
     private final Servicio<Direccion> direccionServicio;
 
     public DireccionControlador() {
-        DireccionDAOImpl direccionDAO=new DireccionDAOImpl();
+        DireccionBaseDeDatos direccionDAO=new DireccionBaseDeDatos();
         this.direccionServicio=new DireccionServicioImpl(direccionDAO);
     }
 

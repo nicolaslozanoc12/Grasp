@@ -1,6 +1,6 @@
 package org.example.ImplDAO;
 
-import org.example.DAO.DepartamentoDAO;
+import org.example.CrudInterfaz.CrudDepartamento;
 import org.example.modelo.Departamento;
 import org.example.modelo.Pais;
 
@@ -11,8 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class DepartamentoDAOImpl implements DepartamentoDAO {
+public class DepartamentoBaseDeDatos implements CrudDepartamento {
     @Override
+
     public void insertar(Departamento objeto) {
         try {
             PreparedStatement preparedStatement = conexion.prepareStatement("INSERT INTO emb.departamentos (nombre,id_pais) VALUES ( ? , ?)");
@@ -36,7 +37,7 @@ public class DepartamentoDAOImpl implements DepartamentoDAO {
                 int id = departamentoResult.getInt("id");
                 String nombreDepartamento = departamentoResult.getString("nombre");
                 int idPais = departamentoResult.getInt("id_pais");
-                PaisDAOImpl paisDAO = new PaisDAOImpl();
+                PaisBaseDeDatos paisDAO = new PaisBaseDeDatos();
                 pais = paisDAO.buscarPorId(idPais);
                 departamento = new Departamento(id,nombreDepartamento,pais);
             }
@@ -57,7 +58,7 @@ public class DepartamentoDAOImpl implements DepartamentoDAO {
             if (departamentoResult.next()) {
                 String nombreDepartamento = departamentoResult.getString("nombre");
                 int idPais = departamentoResult.getInt("id_pais");
-                PaisDAOImpl paisDAO = new PaisDAOImpl();
+                PaisBaseDeDatos paisDAO = new PaisBaseDeDatos();
                 pais = paisDAO.buscarPorId(idPais);
                 departamento = new Departamento(id,nombreDepartamento,pais);
             }
@@ -79,7 +80,7 @@ public class DepartamentoDAOImpl implements DepartamentoDAO {
                 int id = resultSet.getInt("id");
                 String nombreDepartamento = resultSet.getString("nombre");
                 int id_pais = resultSet.getInt("id_pais");
-                PaisDAOImpl paisDAOimpl = new PaisDAOImpl();
+                PaisBaseDeDatos paisDAOimpl = new PaisBaseDeDatos();
                 pais = paisDAOimpl.buscarPorId(id_pais);
                 Departamento departamento = new Departamento(id,nombreDepartamento,pais);
                 departamentos.add(departamento);

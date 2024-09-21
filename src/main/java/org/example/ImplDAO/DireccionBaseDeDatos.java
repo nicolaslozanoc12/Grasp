@@ -1,6 +1,6 @@
 package org.example.ImplDAO;
 
-import org.example.DAO.DireccionDAO;
+import org.example.CrudInterfaz.CrudDireccion;
 import org.example.modelo.Departamento;
 import org.example.modelo.Direccion;
 import org.example.modelo.Municipio;
@@ -13,10 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class DireccionDAOImpl implements DireccionDAO {
-    PaisDAOImpl paisDAO = new PaisDAOImpl();
-    DepartamentoDAOImpl departamentoDAO = new DepartamentoDAOImpl();
-    MunicipioDAOImpl municipioDAO = new MunicipioDAOImpl();
+public class DireccionBaseDeDatos implements CrudDireccion {
+    PaisBaseDeDatos paisDAO = new PaisBaseDeDatos();
+    DepartamentoBaseDeDatos departamentoDAO = new DepartamentoBaseDeDatos();
+    MunicipioBaseDeDatos municipioDAO = new MunicipioBaseDeDatos();
     @Override
     public void insertar(Direccion objeto) {
         try{

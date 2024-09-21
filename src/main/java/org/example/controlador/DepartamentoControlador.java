@@ -1,18 +1,15 @@
 package org.example.controlador;
 
 import org.example.DAO.DepartamentoDAO;
-import org.example.ImplDAO.DepartamentoDAOImpl;
-import org.example.ImplDAO.PaisDAOImpl;
+import org.example.ImplDAO.PaisBaseDeDatos;
 import org.example.modelo.Departamento;
 import org.example.modelo.Pais;
-import org.example.servicio.Impl.DepartamentoServicioImpl;
-import org.example.servicio.Interfaz.Servicio;
 
 import java.util.List;
 
 public class DepartamentoControlador {
     DepartamentoDAO departamentoDAO;
-    PaisDAOImpl paisDAO = new PaisDAOImpl();
+    PaisBaseDeDatos paisDAO = new PaisBaseDeDatos();
 
     public DepartamentoControlador() {
     }

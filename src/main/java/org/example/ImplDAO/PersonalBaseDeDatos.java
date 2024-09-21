@@ -1,6 +1,6 @@
 package org.example.ImplDAO;
 
-import org.example.DAO.PersonalDAO;
+import org.example.CrudInterfaz.CrudPersona;
 import org.example.modelo.Direccion;
 import org.example.modelo.Persona;
 
@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class PersonalDAOImpl implements PersonalDAO {
-    DireccionDAOImpl direccionDAO = new DireccionDAOImpl();
+public class PersonalBaseDeDatos implements CrudPersona {
+    DireccionBaseDeDatos direccionDAO = new DireccionBaseDeDatos();
     @Override
     public void insertar(Persona objeto) {
         try {
@@ -30,7 +30,7 @@ public class PersonalDAOImpl implements PersonalDAO {
         }
     }
 
-    @Override
+
     public Persona buscarPorNombreyApellido(String nombre, String apellido) {
         Persona persona = null;
         try {

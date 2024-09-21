@@ -1,12 +1,12 @@
 package org.example.servicio.Impl;
 
-import org.example.ImplDAO.PersonalDAOImpl;
+import org.example.ImplDAO.PersonalBaseDeDatos;
 import org.example.modelo.Persona;
 
 import java.util.List;
 
 public class PersonalServicio {
-    private final PersonalDAOImpl personalDAO=new PersonalDAOImpl();
+    private final PersonalBaseDeDatos personalDAO=new PersonalBaseDeDatos();
 
     public PersonalServicio() {
     }
