@@ -52,28 +52,6 @@ public class PersonalBaseDeDatos implements CrudPersona {
     }
 
     @Override
-    public Persona buscarPorNombre(String nombre) {
-        Persona persona = null;
-        try {
-            PreparedStatement preparedStatement = conexion.prepareStatement("SELECT * FROM emb.personales WHERE nombre=?");
-            preparedStatement.setString(1, nombre);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                int id = resultSet.getInt("id");
-                String apellido = resultSet.getString("apellidos");
-                int idDireccion = resultSet.getInt("id_direccion");
-                Direccion direccion = direccionDAO.buscarPorId(idDireccion);
-                persona = new Persona(id, nombre, apellido, direccion);
-            }
-        } catch (SQLException e) {
-            logger.log(Level.SEVERE, "error al buscar", e);
-        }
-
-        return persona;
-    }
-
-
-    @Override
     public Persona buscarPorId(int id) {
         Persona persona = null;
         try {

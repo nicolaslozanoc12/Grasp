@@ -13,7 +13,6 @@ public interface Crud<T>{
     Connection conexion = conexionDatabase.getConectionDataBase();
     void insertar(T objeto);
     List<T> buscarTodos();
-    T buscarPorNombre(String nombre);
     T buscarPorId(int id);
     void actualizar(T objeto, int id);
     void eliminar(int id);

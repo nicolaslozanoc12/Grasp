@@ -5,27 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="pequeños cambios en crud y en PaisDAOImpl">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDireccionArchivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPersonalArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/base.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/DepartamentoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/DepartamentoBaseDeDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/DireccionDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/DireccionBaseDeDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EmpleadoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EmpleadoBaseDeDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EstudianteDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EstudianteBaseDeDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EstudiantesInscritosDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EstudiantesInscritosBaseDeDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/MunicipioDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/MunicipioBaseDeDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PaisDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PaisBaseDeDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalBaseDeDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalInscritoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalInscritoBaseDeDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/DepartamentoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controlador/DepartamentoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/DireccionControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controlador/DireccionControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/EmpleadoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controlador/EmpleadoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/EstudianteControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controlador/EstudianteControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/EstudiantesInscritosControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controlador/EstudiantesInscritosControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/MunicipioControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controlador/MunicipioControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/PaisControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controlador/PaisControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/PersonalControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controlador/PersonalControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/PersonalInscritoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controlador/PersonalInscritoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/PersonalServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/PersonalServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudDepartamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudDepartamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudMunicipio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudMunicipio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudPais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudPais.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudPersona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/CrudPersona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EmpleadoBaseDeDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EmpleadoBaseDeDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EstudianteBaseDeDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/EstudianteBaseDeDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalBaseDeDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ImplDAO/PersonalBaseDeDatos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>

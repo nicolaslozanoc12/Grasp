@@ -30,11 +30,6 @@ public class EstudianteBaseDeDatos implements CrudEstudiante {
     }
 
     @Override
-    public Estudiante buscarPorNombre(String nombre) {
-        return null;
-    }
-
-    @Override
     public Estudiante buscarPorId(int id) {
         Estudiante estudiante=null;
         try {

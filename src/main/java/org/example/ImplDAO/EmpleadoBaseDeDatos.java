@@ -31,11 +31,6 @@ public class EmpleadoBaseDeDatos implements CrudEmpleado {
     }
 
     @Override
-    public Empleado buscarPorNombre(String nombre) {
-        return null;
-    }
-
-    @Override
     public Empleado buscarPorId(int id) {
         Empleado empleado=null;
         try {
