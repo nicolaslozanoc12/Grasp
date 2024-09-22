@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="se añaden metodos en crud estudianteArchivos">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudCargoArchivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEmpleadoArchivo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEstudianteArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEstudianteArchivo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
