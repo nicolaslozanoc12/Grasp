@@ -1,4 +1,4 @@
-package org.example.controlador;
+package org.example.Controller;
 
 import org.example.CrudBaseDeDatos.CargoBaseDeDatos;
 import org.example.modelo.Cargo;

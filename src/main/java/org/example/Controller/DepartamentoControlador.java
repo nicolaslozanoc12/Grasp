@@ -1,4 +1,4 @@
-package org.example.controlador;
+package org.example.Controller;
 
 import org.example.DAO.DepartamentoDAO;
 import org.example.CrudBaseDeDatos.PaisBaseDeDatos;

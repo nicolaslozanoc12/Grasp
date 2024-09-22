@@ -1,4 +1,4 @@
-package org.example.controlador;
+package org.example.Controller;
 
 import org.example.CrudBaseDeDatos.PersonalBaseDeDatos;
 import org.example.modelo.Persona;

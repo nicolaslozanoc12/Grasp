@@ -1,4 +1,4 @@
-package org.example.controlador;
+package org.example.Controller;
 
 import org.example.CrudBaseDeDatos.DireccionBaseDeDatos;
 import org.example.modelo.Direccion;

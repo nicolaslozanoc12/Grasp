@@ -1,4 +1,4 @@
-package org.example.controlador;
+package org.example.Controller;
 
 import org.example.CrudBaseDeDatos.MunicipioBaseDeDatos;
 import org.example.modelo.Municipio;
