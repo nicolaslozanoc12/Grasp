@@ -1,6 +1,6 @@
 package org.example.controlador;
 
-import org.example.ImplDAO.PaisBaseDeDatos;
+import org.example.CrudBaseDeDatos.PaisBaseDeDatos;
 import org.example.modelo.Pais;
 
 import java.util.List;

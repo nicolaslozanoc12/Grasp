@@ -5,19 +5,19 @@ import java.util.List;
 
 public class PersonalInscrito {
     private int id;
-    private Empleado Empleado;
+    private Persona persona;
 
-    public PersonalInscrito(int id, org.example.modelo.Empleado empleado) {
+    public PersonalInscrito(int id, Persona persona) {
         this.id = id;
-        Empleado = empleado;
+        this.persona= persona;
     }
 
     public int getId() {
         return id;
     }
 
-    public org.example.modelo.Empleado getEmpleado() {
-        return Empleado;
+    public Persona getPersona() {
+        return persona;
     }
 
     public PersonalInscrito() {

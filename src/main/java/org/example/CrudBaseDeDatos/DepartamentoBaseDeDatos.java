@@ -1,4 +1,4 @@
-package org.example.ImplDAO;
+package org.example.CrudBaseDeDatos;
 
 import org.example.CrudInterfaz.CrudDepartamento;
 import org.example.modelo.Departamento;

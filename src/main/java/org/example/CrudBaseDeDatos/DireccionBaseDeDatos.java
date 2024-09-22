@@ -1,4 +1,4 @@
-package org.example.ImplDAO;
+package org.example.CrudBaseDeDatos;
 
 import org.example.CrudInterfaz.CrudDireccion;
 import org.example.modelo.Departamento;
@@ -32,33 +32,6 @@ public class DireccionBaseDeDatos implements CrudDireccion {
         }catch(SQLException e){
             logger.log(Level.SEVERE, "error SQL", e);
         }
-    }
-
-    @Override
-    public Direccion buscarPorNombre(String nombre) {
-        Direccion direccion=null;
-        try{
-            PreparedStatement preparedStatement=conexion.prepareStatement("SELECT * FROM emb.direcciones WHERE nombre=?");
-            preparedStatement.setString(1, nombre);
-            ResultSet departamentoResult = preparedStatement.executeQuery();
-            if (departamentoResult.next()) {
-                int idDireccion = departamentoResult.getInt("id");
-                int idPais=departamentoResult.getInt("id_pais");
-                int idDepartamento=departamentoResult.getInt("id_departamento");
-                int idMunicipio=departamentoResult.getInt("id_municipio");
-                String calle=departamentoResult.getString("calle");
-                String carrera=departamentoResult.getString("carrera");
-                String coordena=departamentoResult.getString("coordenada");
-                String descripcion=departamentoResult.getString("descripcion");
-                Pais pais= paisDAO.buscarPorId(idPais);
-                Municipio municipio=municipioDAO.buscarPorId(idMunicipio);
-                Departamento departamento=departamentoDAO.buscarPorId(idDepartamento);
-                direccion=new Direccion(idDireccion,municipio,departamento,pais,calle,carrera,coordena,descripcion);
-            }
-        }catch (SQLException e){
-            logger.log(Level.SEVERE, "error SQL", e);
-        }
-        return direccion;
     }
 
     @Override

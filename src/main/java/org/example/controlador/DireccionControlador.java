@@ -1,6 +1,6 @@
 package org.example.controlador;
 
-import org.example.ImplDAO.DireccionBaseDeDatos;
+import org.example.CrudBaseDeDatos.DireccionBaseDeDatos;
 import org.example.modelo.Direccion;
 import org.example.servicio.Impl.DireccionServicioImpl;
 import org.example.servicio.Interfaz.Servicio;

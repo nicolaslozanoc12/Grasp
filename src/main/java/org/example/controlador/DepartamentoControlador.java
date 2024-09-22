@@ -1,7 +1,7 @@
 package org.example.controlador;
 
 import org.example.DAO.DepartamentoDAO;
-import org.example.ImplDAO.PaisBaseDeDatos;
+import org.example.CrudBaseDeDatos.PaisBaseDeDatos;
 import org.example.modelo.Departamento;
 import org.example.modelo.Pais;
 

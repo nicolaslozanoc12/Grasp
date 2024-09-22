@@ -1,6 +1,6 @@
 package org.example.controlador;
 
-import org.example.ImplDAO.CargoBaseDeDatos;
+import org.example.CrudBaseDeDatos.CargoBaseDeDatos;
 import org.example.modelo.Cargo;
 import org.example.servicio.Impl.CargoServicioImpl;
 import org.example.servicio.Interfaz.Servicio;

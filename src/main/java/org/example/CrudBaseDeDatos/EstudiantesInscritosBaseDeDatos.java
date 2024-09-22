@@ -1,4 +1,4 @@
-package org.example.ImplDAO;
+package org.example.CrudBaseDeDatos;
 
 import org.example.CrudInterfaz.CrudEstudiantesInscritos;
 import org.example.modelo.Estudiante;
@@ -27,7 +27,6 @@ public class EstudiantesInscritosBaseDeDatos implements CrudEstudiantesInscritos
 
     }
 
-    @Override
     public EstudiantesInscritos buscarPorNombre(String nombre) {
         EstudiantesInscritos estudiantesInscritos = null;
         Estudiante estudiante = null;

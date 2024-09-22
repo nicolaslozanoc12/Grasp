@@ -93,7 +93,6 @@ public class CrudDireccionArchivo implements CrudDireccion {
         }
 
         InsertarListaDireccion(direcciones);
-
     }
 
     @Override
@@ -115,7 +114,6 @@ public class CrudDireccionArchivo implements CrudDireccion {
         }
 
         InsertarListaDireccion(direcciones);
-
     }
 
     private void InsertarListaDireccion(List<Direccion> direcciones) {

@@ -1,6 +1,6 @@
 package org.example.controlador;
 
-import org.example.ImplDAO.EmpleadoBaseDeDatos;
+import org.example.CrudBaseDeDatos.EmpleadoBaseDeDatos;
 import org.example.modelo.Empleado;
 import org.example.servicio.Impl.EmpleadoServicioImpl;
 import org.example.servicio.Interfaz.Servicio;

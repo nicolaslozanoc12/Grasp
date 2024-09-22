@@ -1,6 +1,7 @@
-package org.example.ImplDAO;
+package org.example.CrudBaseDeDatos;
 
-import org.example.DAO.CargoDAO;
+import org.example.CrudInterfaz.CrudCargo;
+
 import org.example.modelo.Cargo;
 
 import java.sql.PreparedStatement;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class CargoBaseDeDatos implements CargoDAO {
+public class CargoBaseDeDatos implements CrudCargo {
     Cargo cargo;
     @Override
     public void insertar(Cargo objeto) {

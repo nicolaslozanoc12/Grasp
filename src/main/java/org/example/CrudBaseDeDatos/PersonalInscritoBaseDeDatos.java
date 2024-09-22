@@ -1,4 +1,4 @@
-package org.example.ImplDAO;
+package org.example.CrudBaseDeDatos;
 
 import org.example.CrudInterfaz.CrudPersonalInscrito;
 import org.example.modelo.Empleado;
@@ -19,14 +19,12 @@ public class PersonalInscritoBaseDeDatos implements CrudPersonalInscrito {
             String sentenciaInsertarPersonalInscritos="INSERT INTO emb.personalinscrito (id,id_empleado) VALUES (?,?)";
             PreparedStatement preparedStatement=conexion.prepareStatement(sentenciaInsertarPersonalInscritos);
             preparedStatement.setInt(1,objeto.getId());
-            preparedStatement.setInt(2, objeto.getEmpleado().getId());
+            preparedStatement.setInt(2, objeto.getPersona().getId());
             preparedStatement.executeUpdate();
         }catch (SQLException e){
             logger.log(Level.SEVERE, "error al insertar", e);
         }
     }
-
-    @Override
     public PersonalInscrito buscarPorNombre(String nombre) {
         PersonalInscrito personalInscrito = new PersonalInscrito();
         Empleado empleado = null;
@@ -93,7 +91,7 @@ public class PersonalInscritoBaseDeDatos implements CrudPersonalInscrito {
         try {
             PreparedStatement preparedStatement = conexion.prepareStatement("UPDATE * FROM emb.personalinscrito  SET id = ?, id_empleado = ? WHERE id = ?");
             preparedStatement.setInt(1, objeto.getId());
-            preparedStatement.setInt(2, objeto.getEmpleado().getId());
+            preparedStatement.setInt(2, objeto.getPersona().getId());
             preparedStatement.setInt(3, id);
             preparedStatement.executeUpdate();
 

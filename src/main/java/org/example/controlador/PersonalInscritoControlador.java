@@ -1,6 +1,6 @@
 package org.example.controlador;
 
-import org.example.ImplDAO.PersonalInscritoBaseDeDatos;
+import org.example.CrudBaseDeDatos.PersonalInscritoBaseDeDatos;
 import org.example.modelo.PersonalInscrito;
 import org.example.servicio.Impl.PersonalInscritoServicioImpl;
 import org.example.servicio.Interfaz.Servicio;

@@ -1,6 +1,6 @@
 package org.example.servicio.Impl;
 
-import org.example.ImplDAO.PersonalBaseDeDatos;
+import org.example.CrudBaseDeDatos.PersonalBaseDeDatos;
 import org.example.modelo.Persona;
 
 import java.util.List;

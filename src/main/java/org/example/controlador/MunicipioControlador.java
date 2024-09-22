@@ -1,6 +1,6 @@
 package org.example.controlador;
 
-import org.example.ImplDAO.MunicipioBaseDeDatos;
+import org.example.CrudBaseDeDatos.MunicipioBaseDeDatos;
 import org.example.modelo.Municipio;
 import org.example.servicio.Impl.MunicipioServicioImpl;
 import org.example.servicio.Interfaz.Servicio;
