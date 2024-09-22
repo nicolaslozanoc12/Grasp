@@ -2,10 +2,15 @@ package org.example.Config;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLDataException;
+import java.sql.SQLException;
 import java.util.Properties;
 
 public class ConfigLoader {
     private Properties properties=new Properties();
+    private DatabaseManager dbManager;
     public ConfigLoader(){
         loadProperties();
     }
@@ -29,13 +34,11 @@ public class ConfigLoader {
     }
 
     private void configureDatabase() {
-        String dbUrl = properties.getProperty("db.url");
-        String dbUsername = properties.getProperty("db.username");
-        String dbPassword = properties.getProperty("db.password");
-        String dbDriver = properties.getProperty("db.driverClassName");
+        System.out.println("Configurando la base de datos...");
+        dbManager = new DatabaseManager(properties);  // Pasamos las propiedades al DatabaseManager
+        dbManager.connect();  // Conectamos a la base de datos
+        dbManager.checkAndCreateTables();  // Verificamos y creamos tablas si es necesario
 
-        // Lógica para configurar la conexión a la base de datos
-        System.out.println("Configurando la base de datos con URL: " + dbUrl);
     }
 
     private void configureFileStorage() {

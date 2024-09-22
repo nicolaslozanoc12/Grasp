@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="Creación de implementación de interfaces CrudCargoArchivo y CrudEmpleadoArchivo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Config/ConfigLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Config/FileStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="Creación de FileStorage Y clase deconfiguración de properties">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Config/DatabaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/base.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/CargoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/CargoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/DepartamentoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/DepartamentoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/DireccionControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/DireccionControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/EmpleadoCargoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/EmpleadoCargoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/EmpleadoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/EmpleadoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/EstudianteControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/EstudianteControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/EstudiantesInscritosControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/EstudiantesInscritosControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/MunicipioControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/MunicipioControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/PaisControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/PaisControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/PersonalControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/PersonalControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controlador/PersonalInscritoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/PersonalInscritoControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Config/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Config/ConfigLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726947371047</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Creación de FileStorage Y clase deconfiguración de properties">
+      <option name="closed" value="true" />
+      <created>1727039163845</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727039163845</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +207,7 @@
     <MESSAGE value="creacion de crud de archivos direecion y persona" />
     <MESSAGE value="se añaden metodos en crud estudianteArchivos" />
     <MESSAGE value="crud de archivos y base de datos completados" />
-    <option name="LAST_COMMIT_MESSAGE" value="crud de archivos y base de datos completados" />
+    <MESSAGE value="Creación de FileStorage Y clase deconfiguración de properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación de FileStorage Y clase deconfiguración de properties" />
   </component>
 </project>
