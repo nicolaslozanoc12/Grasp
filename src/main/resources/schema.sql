@@ -54,14 +54,16 @@ CREATE TABLE estudiantes (
                              FOREIGN KEY (id) REFERENCES personales(id)
 );
 CREATE TABLE estudiantesinscrito (
-                                id INT AUTO_INCREMENT PRIMARY KEY,
+                                id INT AUTO_INCREMENT,
                                 id_estudiante int,
+                                primary key(id,id_estudiante),
                                 foreign key (id_estudiante) references estudiantes(id)
 );
 
 CREATE TABLE PersonalInscrito (
-                                id INT AUTO_INCREMENT PRIMARY KEY,
+                                id INT AUTO_INCREMENT,
                                 id_personal int,
+                                primary key(id,id_personal)
                                 foreign key (id_personal) references personales(id)
 );
 
