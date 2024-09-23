@@ -4,10 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="Creación de FileStorage Y clase deconfiguración de properties">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Config/DatabaseManager.java" afterDir="false" />
+    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="Se creó DatabaseManager">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/CargoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/DepartamentoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/DireccionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/EmpleadoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/EstudianteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/MunicipioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/PaisController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/PersonaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/base.trace.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Config/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Config/ConfigLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/CargoControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/DepartamentoControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/DireccionControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/EmpleadoCargoControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/EmpleadoControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/EstudianteControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/EstudiantesInscritosControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/MunicipioControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/PaisControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/PersonalControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/PersonalInscritoControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudCargoArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudCargoArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/conexion/ConexionDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/conexion/CrearDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Cargo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Cargo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Departamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Departamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Direccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Direccion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/CargoServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/DepartamentoServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/DireccionServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/EmpleadoCargoServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/EmpleadoServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/EstudianteServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/EstudiantesInscritosServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/MunicipioServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/PaisServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/PersonaDireccionServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/PersonalInscritoServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/PersonalServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/PersonalServicioImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/CargoServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/DepartamentoServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/DireccionServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/EmpleadoCargoServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/EmpleadoServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/EstudianteServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/EstudiantesInscritosServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/MunicipioServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/PaisServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/PersonaDireccionServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/PersonalInscritoServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/PersonalServicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/Servicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +108,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -181,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727039163845</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Se creó DatabaseManager">
+      <option name="closed" value="true" />
+      <created>1727046663231</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727046663231</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +272,7 @@
     <MESSAGE value="se añaden metodos en crud estudianteArchivos" />
     <MESSAGE value="crud de archivos y base de datos completados" />
     <MESSAGE value="Creación de FileStorage Y clase deconfiguración de properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creación de FileStorage Y clase deconfiguración de properties" />
+    <MESSAGE value="Se creó DatabaseManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se creó DatabaseManager" />
   </component>
 </project>

@@ -11,6 +11,7 @@ public class Empleado extends Persona {
         this.salario = salario;
     }
 
+
     @Override
     public String toString(){
         return super.toString()+ cargo + "salario:" + salario;

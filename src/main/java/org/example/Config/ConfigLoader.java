@@ -1,22 +1,31 @@
 package org.example.Config;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLDataException;
-import java.sql.SQLException;
+import java.io.InputStream;
 import java.util.Properties;
 
 public class ConfigLoader {
     private Properties properties=new Properties();
     private DatabaseManager dbManager;
+    private String storageType;
+
+    public String getStorageType() {
+        return storageType;
+    }
+
     public ConfigLoader(){
         loadProperties();
     }
     private void loadProperties(){
-        try(FileInputStream fis=new FileInputStream("config.properties")){
-            properties.load(fis);
+        try(InputStream input =getClass().getClassLoader().getResourceAsStream("config.properties")){
+            if (input == null) {
+                throw new FileNotFoundException("No se pudo encontrar el archivo config.properties en el classpath");
+            }
+            properties.load(input);
+            // Almacenar el tipo de almacenamiento una vez cargadas las propiedades
+            storageType = properties.getProperty("storage.type");
         }catch (IOException e){
             e.printStackTrace();
         }

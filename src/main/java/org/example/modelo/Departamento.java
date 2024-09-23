@@ -10,6 +10,10 @@ public class Departamento{
         this.nombre = nombre;
         this.pais=pais;
     }
+    public Departamento(String nombre, Pais pais) {
+        this.nombre = nombre;
+        this.pais = pais;
+    }
     public Departamento() {
     }
 

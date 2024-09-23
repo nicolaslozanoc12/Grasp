@@ -21,6 +21,16 @@ public class Direccion {
         this.descripcion = descripcion;
     }
 
+    public Direccion(Municipio municipio, Departamento departamento, Pais pais, String calle, String carrera, String coordenada, String descripcion) {
+        this.municipio = municipio;
+        this.departamento = departamento;
+        this.pais = pais;
+        this.calle = calle;
+        this.carrera = carrera;
+        this.coordenada = coordenada;
+        this.descripcion = descripcion;
+    }
+
 
     public int getId() {
         return id;
