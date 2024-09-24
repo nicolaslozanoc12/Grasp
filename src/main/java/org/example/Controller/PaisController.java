@@ -22,7 +22,9 @@ public class PaisController {
         }
     }
     public void createPais(String name){
+        System.out.printf(name + " cadastrado com sucesso\n");
         Pais pais=new Pais(name);
+        System.out.println(pais.getNombre());
         crudPais.insertar(pais);
     }
     public Pais readPais(int id){

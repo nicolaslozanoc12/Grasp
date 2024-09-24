@@ -218,6 +218,7 @@ public class PaisGUI extends javax.swing.JFrame {
 
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
         paisController.createPais(NombrePaisTexto.getText());
+
     }//GEN-LAST:event_botonGuardarActionPerformed
 
     private void botonInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInicioActionPerformed

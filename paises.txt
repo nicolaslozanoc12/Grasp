@@ -1,3 +1,5 @@
 2,Ecuador
 0,Colombia
 0,Colombia
+0,colombia
+0,venezuela
