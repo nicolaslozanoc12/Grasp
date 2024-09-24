@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="Subiendo controladores corregidos">
+    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="Subiendo cambios en conexion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paises.txt" beforeDir="false" afterPath="$PROJECT_DIR$/paises.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/PaisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/PaisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/PaisGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/PaisGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDepartamentoArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDepartamentoArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDireccionArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDireccionArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEmpleadoArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEmpleadoArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEstudianteArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEstudianteArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEstudiantesInscritosArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEstudiantesInscritosArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudMunicipioArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudMunicipioArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPaisArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPaisArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPersonalArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPersonalArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPersonalInscritoArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPersonalInscritoArchivo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727134662247</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Subiendo cambios en conexion">
+      <option name="closed" value="true" />
+      <created>1727147620146</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1727147620146</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +242,7 @@
     <MESSAGE value="Creación de FileStorage Y clase deconfiguración de properties" />
     <MESSAGE value="Se creó DatabaseManager" />
     <MESSAGE value="Subiendo controladores corregidos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Subiendo controladores corregidos" />
+    <MESSAGE value="Subiendo cambios en conexion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Subiendo cambios en conexion" />
   </component>
 </project>
