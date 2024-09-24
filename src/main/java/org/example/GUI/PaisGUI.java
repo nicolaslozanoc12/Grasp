@@ -3,19 +3,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package org.example.GUI;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import org.example.Config.ConfigLoader;
 import org.example.GUI.InicioFrame;
+import org.example.Controller.PaisController;
+import org.example.modelo.Pais;
 
 /**
  *
  * @author nicol
  */
 public class PaisGUI extends javax.swing.JFrame {
-
-    /**
-     * Creates new form PaisGUI
-     */
+    ConfigLoader configLoader=new ConfigLoader();
+    DefaultTableModel modeloTabla = new DefaultTableModel();
+    PaisController paisController = new PaisController(configLoader);
+    
     public PaisGUI() {
         initComponents();
+        String ids [] = {"IdPais","NombrePais"};
+        modeloTabla.setColumnIdentifiers(ids);
+        tablaPais.setModel(modeloTabla);
+        
     }
 
     /**
@@ -56,10 +65,25 @@ public class PaisGUI extends javax.swing.JFrame {
         });
 
         botonBuscar.setText("Buscar");
+        botonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarActionPerformed(evt);
+            }
+        });
 
         botonEditar.setText("Editar");
+        botonEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEditarActionPerformed(evt);
+            }
+        });
 
         botonEliminar.setText("Eliminar");
+        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarActionPerformed(evt);
+            }
+        });
 
         botonGuardar.setText("Guardar");
         botonGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -177,12 +201,23 @@ public class PaisGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void llenarTablaTodosDatos(){
+        List<Pais> listaPais = paisController.paisesList();
+       for(Pais pais : listaPais){
+           Object[] object = new Object[2];
+           object[0] = pais.getId();
+           object[1] = pais.getNombre();
+           modeloTabla.addRow(object);
+       }
+        
+    
+    }
     private void IdTextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IdTextoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_IdTextoActionPerformed
 
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
-        // TODO add your handling code here:
+        paisController.createPais(NombrePaisTexto.getText());
     }//GEN-LAST:event_botonGuardarActionPerformed
 
     private void botonInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInicioActionPerformed
@@ -190,6 +225,19 @@ public class PaisGUI extends javax.swing.JFrame {
         newframe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonInicioActionPerformed
+
+    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
+        paisController.deletePais(Integer.parseInt(IdTexto.getText()));
+    }//GEN-LAST:event_botonEliminarActionPerformed
+
+    private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
+        Pais pais = paisController.readPais(Integer.parseInt(IdTexto.getText()));
+        modeloTabla.addRow(new Object[]{pais.getId(),pais.getNombre()});
+    }//GEN-LAST:event_botonBuscarActionPerformed
+
+    private void botonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarActionPerformed
+         paisController.updatePais(Integer.parseInt(IdTexto.getText()), NombrePaisTexto.getText());
+    }//GEN-LAST:event_botonEditarActionPerformed
 
     /**
      * @param args the command line arguments

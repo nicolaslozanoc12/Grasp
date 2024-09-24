@@ -1,5 +1,6 @@
 package org.example.Controller;
 
+import java.util.List;
 import org.example.Config.ConfigLoader;
 import org.example.CrudInterfaz.CrudPais;
 import org.example.archivos.CrudCargoArchivo;
@@ -33,5 +34,8 @@ public class PaisController {
     }
     public void deletePais(int id){
         crudPais.eliminar(id);
+    }
+    public List<Pais> paisesList(){
+        return crudPais.buscarTodos();
     }
 }

@@ -4,65 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="Se creó DatabaseManager">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/CargoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/DepartamentoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/DireccionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/EmpleadoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/EstudianteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/MunicipioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/PaisController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/PersonaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/base.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Config/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Config/ConfigLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/CargoControlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/DepartamentoControlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/DireccionControlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/EmpleadoCargoControlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/EmpleadoControlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/EstudianteControlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/EstudiantesInscritosControlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/MunicipioControlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/PaisControlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/PersonalControlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/PersonalInscritoControlador.java" beforeDir="false" />
+    <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="creación de vistas">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Config/Conexion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/CargoGUI.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/CargoGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/EstudianteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/EstudianteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/PaisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/PaisController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller/PersonaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller/PersonaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CrudInterfaz/Crud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudCargoArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudCargoArchivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/conexion/ConexionDatabase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/conexion/CrearDatabase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Cargo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Cargo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Departamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Departamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Direccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Direccion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/modelo/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/modelo/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/CargoServicioImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/DepartamentoServicioImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/DireccionServicioImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/EmpleadoCargoServicioImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/EmpleadoServicioImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/EstudianteServicioImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/EstudiantesInscritosServicioImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/MunicipioServicioImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/PaisServicioImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/PersonaDireccionServicioImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/PersonalInscritoServicioImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/PersonalServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Impl/PersonalServicioImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/CargoServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/DepartamentoServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/DireccionServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/EmpleadoCargoServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/EmpleadoServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/EstudianteServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/EstudiantesInscritosServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/MunicipioServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/PaisServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/PersonaDireccionServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/PersonalInscritoServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/PersonalServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/servicio/Interfaz/Servicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/DepartamentoGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/DepartamentoGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/DepartamentoGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/DepartamentoGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/DireccionGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/DireccionGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/DireccionGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/DireccionGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/EmpleadoGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/EmpleadoGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/EmpleadoGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/EmpleadoGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/EstudianteGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/EstudianteGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/EstudianteGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/EstudianteGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/EstudiantesIncritosGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/EstudiantesIncritosGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/EstudiantesIncritosGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/EstudiantesIncritosGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/InicioFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/InicioFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/InicioFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/InicioFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/Municipio.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/MunicipioGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/Municipio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/MunicipioGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/PaisGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/PaisGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/PaisGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/PaisGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/PersonalInscritoGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/PersonalInscritoGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/PersonalInscritoGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/PersonalInscritoGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,31 +61,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/nicol/OneDrive/Documentos/TECNOLOGIAS/SOLID/Grasp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nicol/OneDrive/Documentos/TECNOLOGIAS/SOLID/Grasp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "h2"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.archivos" />

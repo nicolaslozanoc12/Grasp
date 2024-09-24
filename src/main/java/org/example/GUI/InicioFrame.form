@@ -63,12 +63,12 @@
                   <Component id="botonDireccion" pref="45" max="32767" attributes="0"/>
                   <Component id="botonMunicipio" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <EmptySpace pref="16" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="botonEmpleado" pref="48" max="32767" attributes="0"/>
                   <Component id="botonEstudiante" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="12" max="32767" attributes="0"/>
+              <EmptySpace pref="11" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="botonEstudiantesInscritos" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="botoncargo" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
@@ -138,6 +138,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Departamento"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonDepartamentoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonMunicipio">
       <Properties>
@@ -167,16 +170,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Empleado"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEmpleadoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botoncargo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cargo"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botoncargoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonEstudiantesInscritos">
       <Properties>
         <Property name="text" type="java.lang.String" value="Estudiantes Inscritos"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEstudiantesInscritosActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonPersonalInscrito">
       <Properties>

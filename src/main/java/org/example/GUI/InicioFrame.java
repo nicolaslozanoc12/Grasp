@@ -4,6 +4,13 @@
  */
 package org.example.GUI;
 import  org.example.GUI.PaisGUI;
+import  org.example.GUI.DepartamentoGUI;
+import  org.example.GUI.MunicipioGUI;
+import  org.example.GUI.DireccionGUI;
+import  org.example.GUI.EstudianteGUI;
+import  org.example.GUI.EmpleadoGUI;
+import  org.example.GUI.EstudiantesIncritosGUI;
+import  org.example.GUI.PersonalInscritoGUI;
 
 /**
  *
@@ -78,6 +85,11 @@ public class InicioFrame extends javax.swing.JFrame {
         });
 
         botonDepartamento.setText("Departamento");
+        botonDepartamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonDepartamentoActionPerformed(evt);
+            }
+        });
 
         botonMunicipio.setText("Municipio");
         botonMunicipio.addActionListener(new java.awt.event.ActionListener() {
@@ -101,10 +113,25 @@ public class InicioFrame extends javax.swing.JFrame {
         });
 
         botonEmpleado.setText("Empleado");
+        botonEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEmpleadoActionPerformed(evt);
+            }
+        });
 
         botoncargo.setText("Cargo");
+        botoncargo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botoncargoActionPerformed(evt);
+            }
+        });
 
         botonEstudiantesInscritos.setText("Estudiantes Inscritos");
+        botonEstudiantesInscritos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEstudiantesInscritosActionPerformed(evt);
+            }
+        });
 
         botonPersonalInscrito.setText("Personal Inscrito");
         botonPersonalInscrito.addActionListener(new java.awt.event.ActionListener() {
@@ -150,11 +177,11 @@ public class InicioFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(botonDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
                     .addComponent(botonMunicipio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(botonEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
                     .addComponent(botonEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(botonEstudiantesInscritos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botoncargo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -173,20 +200,52 @@ public class InicioFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPaisActionPerformed
 
     private void botonMunicipioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMunicipioActionPerformed
-        // TODO add your handling code here:
+        MunicipioGUI newframe = new MunicipioGUI();
+        newframe.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botonMunicipioActionPerformed
 
     private void botonDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDireccionActionPerformed
-        // TODO add your handling code here:
+        DireccionGUI newframe = new DireccionGUI();
+        newframe.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botonDireccionActionPerformed
 
     private void botonEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEstudianteActionPerformed
-        // TODO add your handling code here:
+        EstudianteGUI newframe = new EstudianteGUI();
+        newframe.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botonEstudianteActionPerformed
 
     private void botonPersonalInscritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPersonalInscritoActionPerformed
-        // TODO add your handling code here:
+        PersonalInscritoGUI newframe = new PersonalInscritoGUI();
+        newframe.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botonPersonalInscritoActionPerformed
+
+    private void botonDepartamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDepartamentoActionPerformed
+        DepartamentoGUI newframe = new DepartamentoGUI();
+        newframe.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonDepartamentoActionPerformed
+
+    private void botonEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEmpleadoActionPerformed
+        EmpleadoGUI newframe = new EmpleadoGUI();
+        newframe.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonEmpleadoActionPerformed
+
+    private void botoncargoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoncargoActionPerformed
+        CargoGUI newframe = new CargoGUI();
+        newframe.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botoncargoActionPerformed
+
+    private void botonEstudiantesInscritosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEstudiantesInscritosActionPerformed
+        EstudiantesIncritosGUI newframe = new EstudiantesIncritosGUI();
+        newframe.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonEstudiantesInscritosActionPerformed
 
     /**
      * @param args the command line arguments

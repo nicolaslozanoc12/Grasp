@@ -25,15 +25,15 @@ public class EstudianteController {
         }
     }
     public void createEstudiante(String nombre, String apellido, String calleYcarrera,String codigo,String prorgama, Double promedio ){
-        Direccion direccion=crudDireccion.buscarPorCalleYCarrera(calleYcarrera);
-        Estudiante estudiante=new Estudiante(nombre,apellido,direccion,codigo,prorgama,promedio);
-        crudEstudiante.insertar(estudiante);
+        //Direccion direccion=crudDireccion.buscarPorCalleYCarrera(calleYcarrera);
+        //Estudiante estudiante=new Estudiante(nombre,apellido,direccion,codigo,prorgama,promedio);
+        //crudEstudiante.insertar(estudiante);
     }
     public Estudiante readEstuadiante(int id){
         return crudEstudiante.buscarPorId(id);
     }
-    public void updateEstudiante(int id, ){
-
+    public void updateEstudiante(){
+  
     }
     public void deleteEstudiante(int id){
         crudEstudiante.eliminar(id);
