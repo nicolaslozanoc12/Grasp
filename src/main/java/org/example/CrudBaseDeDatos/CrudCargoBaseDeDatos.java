@@ -1,9 +1,11 @@
 package org.example.CrudBaseDeDatos;
 
+import org.example.Config.ConfigLoader;
 import org.example.CrudInterfaz.CrudCargo;
 
 import org.example.modelo.Cargo;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,7 +13,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class CargoBaseDeDatos implements CrudCargo {
+public class CrudCargoBaseDeDatos implements CrudCargo {
+    private Connection conexion;
+    private ConfigLoader configLoader;
+
+    public CrudCargoBaseDeDatos(ConfigLoader configLoader) {
+        // Configurar el tipo de almacenamiento
+        configLoader.configureStorage();
+        // Obtener la conexión desde el DatabaseManager
+        this.conexion = configLoader.getDbManager().getConnection();
+    }
+
     Cargo cargo;
     @Override
     public void insertar(Cargo objeto) {

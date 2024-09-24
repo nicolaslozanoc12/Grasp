@@ -1,11 +1,13 @@
 package org.example.CrudBaseDeDatos;
 
+import org.example.Config.ConfigLoader;
 import org.example.CrudInterfaz.CrudDireccion;
 import org.example.modelo.Departamento;
 import org.example.modelo.Direccion;
 import org.example.modelo.Municipio;
 import org.example.modelo.Pais;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,9 +16,19 @@ import java.util.List;
 import java.util.logging.Level;
 
 public class DireccionBaseDeDatos implements CrudDireccion {
+    private Connection conexion;
+    private ConfigLoader configLoader;
+
+    // Constructor donde configuramos el almacenamiento y obtenemos la conexión
+    public DireccionBaseDeDatos(ConfigLoader configLoader) {
+        this.configLoader = configLoader;
+        configLoader.configureStorage();  // Configuramos el tipo de almacenamiento
+        this.conexion = configLoader.getDbManager().getConnection();  // Obtenemos la conexión desde ConfigLoader
+    }
+
     PaisBaseDeDatos paisDAO = new PaisBaseDeDatos();
-    DepartamentoBaseDeDatos departamentoDAO = new DepartamentoBaseDeDatos();
-    MunicipioBaseDeDatos municipioDAO = new MunicipioBaseDeDatos();
+    CrudDepartamentoBaseDeDatos departamentoDAO = new CrudDepartamentoBaseDeDatos(configLoader);
+    MunicipioBaseDeDatos municipioDAO = new MunicipioBaseDeDatos(configLoader);
     @Override
     public void insertar(Direccion objeto) {
         try{
@@ -117,5 +129,33 @@ public class DireccionBaseDeDatos implements CrudDireccion {
         }catch(SQLException e){
             logger.log(Level.SEVERE, "error SQL", e);
         }
+    }
+
+    @Override
+    public Direccion buscarPorCalleYCarrera(String calle, String carrera) {
+        Direccion direccion=null;
+        try{
+            PreparedStatement preparedStatement=conexion.prepareStatement("SELECT * FROM emb.direcciones WHERE calle=? AND carrera=?");
+            preparedStatement.setString(1, calle);
+            preparedStatement.setString(2,carrera);
+            ResultSet departamentoResult = preparedStatement.executeQuery();
+            if (departamentoResult.next()) {
+                int idDireccion = departamentoResult.getInt("id");
+                int idPais=departamentoResult.getInt("id_pais");
+                int idDepartamento=departamentoResult.getInt("id_departamento");
+                int idMunicipio=departamentoResult.getInt("id_municipio");
+                String calleResult=departamentoResult.getString("calle");
+                String carreraResult=departamentoResult.getString("carrera");
+                String coordena=departamentoResult.getString("coordenada");
+                String descripcion=departamentoResult.getString("descripcion");
+                Pais pais= paisDAO.buscarPorId(idPais);
+                Municipio municipio=municipioDAO.buscarPorId(idMunicipio);
+                Departamento departamento=departamentoDAO.buscarPorId(idDepartamento);
+                direccion=new Direccion(idDireccion,municipio,departamento,pais,calleResult,carreraResult,coordena,descripcion);
+            }
+        }catch (SQLException e){
+            logger.log(Level.SEVERE, "error SQL", e);
+        }
+        return direccion;
     }
 }

@@ -13,7 +13,9 @@ public class Main {
     public static void main(String[] args) {
         ConfigLoader configLoader=new ConfigLoader();
         CargoController cargoController=new CargoController(configLoader);
+        System.out.println("Entro");
         cargoController.createCargo("Desarrollador");
+        System.out.println("HolA");
         cargoController.deleteCargo(1);
     }
 }

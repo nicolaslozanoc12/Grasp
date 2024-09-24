@@ -1,6 +1,7 @@
 package org.example.Controller;
 
 import org.example.Config.ConfigLoader;
+import org.example.CrudBaseDeDatos.CrudCargoBaseDeDatos;
 import org.example.CrudInterfaz.CrudCargo;
 import org.example.archivos.CrudCargoArchivo;
 import org.example.modelo.Cargo;
@@ -13,7 +14,7 @@ public class CargoController {
         String storageType = configLoader.getStorageType();
 
         if ("database".equalsIgnoreCase(storageType)) {
-            //this.crudCargo = new CrudCargoBaseDeDatos();  // Implementación de base de datos
+            this.crudCargo = new CrudCargoBaseDeDatos(configLoader);  // Implementación de base de datos
         } else if ("file".equalsIgnoreCase(storageType)) {
             this.crudCargo = new CrudCargoArchivo();  // Implementación para archivos
         } else {

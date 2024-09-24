@@ -1,9 +1,11 @@
 package org.example.CrudBaseDeDatos;
 
+import org.example.Config.ConfigLoader;
 import org.example.CrudInterfaz.CrudPersona;
 import org.example.modelo.Direccion;
 import org.example.modelo.Persona;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +14,17 @@ import java.util.List;
 import java.util.logging.Level;
 
 public class PersonalBaseDeDatos implements CrudPersona {
-    DireccionBaseDeDatos direccionDAO = new DireccionBaseDeDatos();
+    private Connection conexion;
+    private ConfigLoader configLoader;
+
+    public PersonalBaseDeDatos(ConfigLoader configLoader) {
+        // Configurar el tipo de almacenamiento
+        configLoader.configureStorage();
+        // Obtener la conexión desde el DatabaseManager
+        this.conexion = configLoader.getDbManager().getConnection();
+    }
+
+    DireccionBaseDeDatos direccionDAO = new DireccionBaseDeDatos(configLoader);
     @Override
     public void insertar(Persona objeto) {
         try {

@@ -24,19 +24,19 @@ public class PersonaController {
             throw new IllegalArgumentException("Tipo de almacenamiento inválido: " + storageType);
         }
     }
-    public void createPersona(String name, String surname, String CalleyCarrera){
-        //Direccion direccion=crudDireccion.buscarPorCalleYCarrera(CalleyCarrera);
-        //Persona persona=new Persona(name,surname,direccion);
-        //crudPersona.insertar(persona);
+    public void createPersona(String name, String surname, String calle,String carrera){
+        Direccion direccion=crudDireccion.buscarPorCalleYCarrera(calle,carrera);
+        Persona persona=new Persona(name,surname,direccion);
+        crudPersona.insertar(persona);
 
     }
     public Persona readPersona(int id){
         return crudPersona.buscarPorId(id);
     }
-    public void updatePersona(int id,String name, String surname, String CalleyCarrera) {
-        //Direccion direccion = crudDireccion.buscarPorCalleYCarrera(CalleyCarrera);
-//        Persona persona = new Persona(name, surname, direccion);
-       // crudPersona.actualizar(persona, id);
+    public void updatePersona(int id,String name, String surname, String calle,String carrera) {
+        Direccion direccion = crudDireccion.buscarPorCalleYCarrera(calle, carrera);
+        Persona persona = new Persona(name, surname, direccion);
+        crudPersona.actualizar(persona, id);
     }
     public void deletePersona(int id){
         crudPersona.eliminar(id);

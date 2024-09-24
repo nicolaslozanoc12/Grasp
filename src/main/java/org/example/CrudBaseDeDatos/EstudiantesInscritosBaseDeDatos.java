@@ -1,9 +1,11 @@
 package org.example.CrudBaseDeDatos;
 
+import org.example.Config.ConfigLoader;
 import org.example.CrudInterfaz.CrudEstudiantesInscritos;
 import org.example.modelo.Estudiante;
 import org.example.modelo.EstudiantesInscritos;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +14,16 @@ import java.util.List;
 import java.util.logging.Level;
 
 public class EstudiantesInscritosBaseDeDatos implements CrudEstudiantesInscritos {
-    EstudianteBaseDeDatos estudiantesDAO=new EstudianteBaseDeDatos();
+    private Connection conexion;
+    private ConfigLoader configLoader;
+
+    public EstudiantesInscritosBaseDeDatos(ConfigLoader configLoader) {
+        // Configurar el tipo de almacenamiento
+        configLoader.configureStorage();
+        // Obtener la conexión desde el DatabaseManager
+        this.conexion = configLoader.getDbManager().getConnection();
+    }
+    EstudianteBaseDeDatos estudiantesDAO=new EstudianteBaseDeDatos(configLoader);
     @Override
     public void insertar(EstudiantesInscritos objeto) {
         try{

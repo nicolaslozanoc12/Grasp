@@ -133,4 +133,9 @@ public class CrudDireccionArchivo implements CrudDireccion {
             logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
     }
+
+    @Override
+    public Direccion buscarPorCalleYCarrera(String calle, String carrera) {
+        return null;
+    }
 }

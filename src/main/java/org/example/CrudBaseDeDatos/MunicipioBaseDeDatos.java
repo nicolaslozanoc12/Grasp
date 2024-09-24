@@ -1,9 +1,11 @@
 package org.example.CrudBaseDeDatos;
 
+import org.example.Config.ConfigLoader;
 import org.example.CrudInterfaz.CrudMunicipio;
 import org.example.modelo.Departamento;
 import org.example.modelo.Municipio;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,6 +14,15 @@ import java.util.List;
 import java.util.logging.Level;
 
 public class MunicipioBaseDeDatos implements CrudMunicipio {
+    private Connection conexion;
+    private ConfigLoader configLoader;
+
+    public MunicipioBaseDeDatos(ConfigLoader configLoader) {
+        // Configurar el tipo de almacenamiento
+        configLoader.configureStorage();
+        // Obtener la conexión desde el DatabaseManager
+        this.conexion = configLoader.getDbManager().getConnection();
+    }
     @Override
     public void insertar(Municipio objeto) {
         try {
@@ -35,7 +46,7 @@ public class MunicipioBaseDeDatos implements CrudMunicipio {
                 int idMunicipio = resultSet.getInt("id");
                 String nombreMunicipio = resultSet.getString("nombre");
                 int departamentoId = resultSet.getInt("id_departamento");
-                DepartamentoBaseDeDatos departamentoDAO = new DepartamentoBaseDeDatos();
+                CrudDepartamentoBaseDeDatos departamentoDAO = new CrudDepartamentoBaseDeDatos(configLoader);
                 Departamento departamento = departamentoDAO.buscarPorId(departamentoId);
                 municipio = new Municipio(idMunicipio,nombreMunicipio, departamento);
             }
@@ -56,7 +67,7 @@ public class MunicipioBaseDeDatos implements CrudMunicipio {
                 int idMunicipio = resultSet.getInt("id");
                 String nombreMunicipio = resultSet.getString("nombre");
                 int departamentoId = resultSet.getInt("id_departamento");
-                DepartamentoBaseDeDatos departamentoDAO = new DepartamentoBaseDeDatos();
+                CrudDepartamentoBaseDeDatos departamentoDAO = new CrudDepartamentoBaseDeDatos(configLoader);
                 Departamento departamento = departamentoDAO.buscarPorId(departamentoId);
                 municipio = new Municipio(idMunicipio,nombreMunicipio, departamento);
             }
@@ -76,7 +87,7 @@ public class MunicipioBaseDeDatos implements CrudMunicipio {
                 int id = municipioSet.getInt("id");
                 String nombre = municipioSet.getString("nombre");
                 int idDepartamento = municipioSet.getInt("id_departamento");
-                DepartamentoBaseDeDatos departamentoDAO = new DepartamentoBaseDeDatos();
+                CrudDepartamentoBaseDeDatos departamentoDAO = new CrudDepartamentoBaseDeDatos(configLoader);
                 Departamento departamento = departamentoDAO.buscarPorId(idDepartamento);
                 Municipio municipio = new Municipio(id,nombre,departamento);
                 municipios.add(municipio);

@@ -15,19 +15,22 @@ public class DatabaseManager {
 
     // Método para conectar a la base de datos
     public void connect() {
-        String dbUrl = properties.getProperty("db.url");
-        String dbUsername = properties.getProperty("db.username");
-        String dbPassword = properties.getProperty("db.password");
-        String dbDriver = properties.getProperty("db.driverClassName");
-
         try {
-            Class.forName(dbDriver); // Cargar el driver
-            connection = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
-            System.out.println("Conectado a la base de datos H2 con éxito!");
-        } catch (ClassNotFoundException | SQLException e) {
+            String url = properties.getProperty("db.url");
+            String username = properties.getProperty("db.username");
+            String password = properties.getProperty("db.password");
+            System.out.println("Username: "+username+"Password: "+password);
+            connection = DriverManager.getConnection(url, username, password);
+            System.out.println("Conexión establecida con éxito.");
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
+    public Connection getConnection() {
+        return connection;
+    }
+
     public void checkAndCreateTables() {
         List<String> tablesToCheck = new ArrayList<>();
         tablesToCheck.add("paises");
@@ -70,54 +73,23 @@ public class DatabaseManager {
 
         switch (tableName) {
             case "paises":
-                createSQL = "CREATE TABLE paises(id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(150) NOT NULL)";
+                createSQL = "CREATE TABLE IF NOT EXISTS paises(id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(150) NOT NULL)";
                 break;
 
             case "departamentos":
-                createSQL = "CREATE TABLE departamentos(id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(150) NOT NULL, id_pais INT, FOREIGN KEY(id_pais) REFERENCES paises(id))";
+                createSQL = "CREATE TABLE IF NOT EXISTS departamentos(id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(150) NOT NULL, id_pais INT, FOREIGN KEY(id_pais) REFERENCES paises(id))";
                 break;
 
             case "municipios":
-                createSQL = "CREATE TABLE municipios(id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(150) NOT NULL, id_departamento INT, FOREIGN KEY(id_departamento) REFERENCES departamentos(id))";
+                createSQL = "CREATE TABLE IF NOT EXISTS municipios(id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(150) NOT NULL, id_departamento INT, FOREIGN KEY(id_departamento) REFERENCES departamentos(id))";
                 break;
 
             case "direcciones":
-                createSQL = "CREATE TABLE direcciones(id INT AUTO_INCREMENT PRIMARY KEY, id_pais INT, id_departamento INT, id_municipio INT, calle VARCHAR(100), carrera VARCHAR(100), coordenada VARCHAR(200), descripcion VARCHAR(200), " +
+                createSQL = "CREATE TABLE IF NOT EXISTS direcciones(id INT AUTO_INCREMENT PRIMARY KEY, id_pais INT, id_departamento INT, id_municipio INT, calle VARCHAR(100), carrera VARCHAR(100), coordenada VARCHAR(200), descripcion VARCHAR(200), " +
                         "FOREIGN KEY(id_pais) REFERENCES paises(id), FOREIGN KEY(id_departamento) REFERENCES departamentos(id), FOREIGN KEY(id_municipio) REFERENCES municipios(id))";
                 break;
 
-            case "personales":
-                createSQL = "CREATE TABLE personales(id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255) NOT NULL, apellidos VARCHAR(255) NOT NULL, id_direccion INT, FOREIGN KEY(id_direccion) REFERENCES direcciones(id))";
-                break;
-
-            case "cargos":
-                createSQL = "CREATE TABLE cargos(id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(50))";
-                break;
-
-            case "empleados":
-                createSQL = "CREATE TABLE empleados(id INT AUTO_INCREMENT PRIMARY KEY, id_cargo INT, salario DOUBLE, id_persona INT, " +
-                        "FOREIGN KEY (id_persona) REFERENCES personales(id), FOREIGN KEY (id_cargo) REFERENCES cargos(id))";
-                break;
-
-            case "estudiantes":
-                createSQL = "CREATE TABLE estudiantes(id INT PRIMARY KEY, codigo VARCHAR(20), programa VARCHAR(100), promedio DOUBLE, " +
-                        "FOREIGN KEY (id) REFERENCES personales(id))";
-                break;
-
-            case "estudiantesinscrito":
-                createSQL = "CREATE TABLE estudiantesinscrito(id INT AUTO_INCREMENT PRIMARY KEY, id_estudiante int, " +
-                        "FOREIGN KEY (id_estudiante) REFERENCES estudiantes(id))";
-                break;
-
-            case "PersonalInscrito":
-                createSQL = "CREATE TABLE PersonalInscrito(id INT AUTO_INCREMENT PRIMARY KEY, id_personal int, " +
-                        "FOREIGN KEY (id_personal) REFERENCES personales(id))";
-                break;
-
-            case "listadoTodos":
-                createSQL = "CREATE TABLE listadoTodos(id int AUTO_INCREMENT PRIMARY KEY, id_persona int, id_cargo int, " +
-                        "FOREIGN KEY (id_persona) REFERENCES personales(id), FOREIGN KEY (id_cargo) REFERENCES cargos(id))";
-                break;
+            // Agregar otros casos de tablas aquí...
 
             default:
                 System.out.println("Tabla no reconocida: " + tableName);
@@ -127,7 +99,7 @@ public class DatabaseManager {
         try (Statement stmt = connection.createStatement()) {
             stmt.executeUpdate(createSQL);
             System.out.println("Tabla " + tableName + " creada con éxito.");
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

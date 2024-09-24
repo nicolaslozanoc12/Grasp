@@ -1,10 +1,12 @@
 package org.example.CrudBaseDeDatos;
 
+import org.example.Config.ConfigLoader;
 import org.example.CrudInterfaz.CrudEmpleado;
 import org.example.modelo.Cargo;
 import org.example.modelo.Empleado;
 import org.example.modelo.Persona;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,9 +15,16 @@ import java.util.List;
 import java.util.logging.Level;
 
 public class EmpleadoBaseDeDatos implements CrudEmpleado {
-    CargoBaseDeDatos cargoDAO=new CargoBaseDeDatos();
-    PersonalBaseDeDatos personalDAO=new PersonalBaseDeDatos();
-
+    private Connection conexion;
+    private ConfigLoader configLoader;
+    CrudCargoBaseDeDatos cargoDAO=new CrudCargoBaseDeDatos(configLoader);
+    PersonalBaseDeDatos personalDAO=new PersonalBaseDeDatos(configLoader);
+    public EmpleadoBaseDeDatos(ConfigLoader configLoader) {
+        // Configurar el tipo de almacenamiento
+        configLoader.configureStorage();
+        // Obtener la conexión desde el DatabaseManager
+        this.conexion = configLoader.getDbManager().getConnection();
+    }
     @Override
     public void insertar(Empleado objeto) {
         try{

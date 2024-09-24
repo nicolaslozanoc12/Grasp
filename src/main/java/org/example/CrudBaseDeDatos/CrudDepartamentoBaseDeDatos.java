@@ -1,9 +1,11 @@
 package org.example.CrudBaseDeDatos;
 
+import org.example.Config.ConfigLoader;
 import org.example.CrudInterfaz.CrudDepartamento;
 import org.example.modelo.Departamento;
 import org.example.modelo.Pais;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,7 +13,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
-public class DepartamentoBaseDeDatos implements CrudDepartamento {
+public class CrudDepartamentoBaseDeDatos implements CrudDepartamento {
+    private Connection conexion;
+    private ConfigLoader configLoader;
+
+    // Constructor donde configuramos el almacenamiento y obtenemos la conexión
+    public CrudDepartamentoBaseDeDatos(ConfigLoader configLoader) {
+        this.configLoader = configLoader;
+        configLoader.configureStorage();  // Configuramos el tipo de almacenamiento
+        this.conexion = configLoader.getDbManager().getConnection();  // Obtenemos la conexión desde ConfigLoader
+    }
+
     @Override
 
     public void insertar(Departamento objeto) {
