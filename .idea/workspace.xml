@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cd951e82-42aa-4f9e-ab1e-fa99c60aa2ef" name="Changes" comment="Subiendo cambios en conexion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDepartamentoArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDepartamentoArchivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDireccionArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudDireccionArchivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEmpleadoArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEmpleadoArchivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEstudianteArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEstudianteArchivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEstudiantesInscritosArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudEstudiantesInscritosArchivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudMunicipioArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudMunicipioArchivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPaisArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPaisArchivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPersonalArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPersonalArchivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPersonalInscritoArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/archivos/CrudPersonalInscritoArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paises.txt" beforeDir="false" afterPath="$PROJECT_DIR$/paises.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/PaisGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/PaisGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

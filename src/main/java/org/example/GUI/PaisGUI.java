@@ -24,6 +24,16 @@ public class PaisGUI extends javax.swing.JFrame {
         String ids [] = {"IdPais","NombrePais"};
         modeloTabla.setColumnIdentifiers(ids);
         tablaPais.setModel(modeloTabla);
+        List<Pais> listaPais = paisController.paisesList();
+        if(listaPais.size()>0){
+        for(Pais pais : listaPais){
+            Object[] object = new Object[2];
+            object[0] = pais.getId();
+            object[1] = pais.getNombre();
+            modeloTabla.addRow(object);
+        }
+        }
+
         
     }
 
@@ -202,13 +212,7 @@ public class PaisGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void llenarTablaTodosDatos(){
-        List<Pais> listaPais = paisController.paisesList();
-       for(Pais pais : listaPais){
-           Object[] object = new Object[2];
-           object[0] = pais.getId();
-           object[1] = pais.getNombre();
-           modeloTabla.addRow(object);
-       }
+
         
     
     }
