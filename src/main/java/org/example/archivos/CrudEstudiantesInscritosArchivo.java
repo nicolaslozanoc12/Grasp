@@ -2,22 +2,46 @@ package org.example.archivos;
 
 import org.example.CrudInterfaz.CrudEstudiante;
 import org.example.CrudInterfaz.CrudEstudiantesInscritos;
-import org.example.modelo.*;
+import org.example.modelo.Estudiante;
+import org.example.modelo.EstudiantesInscritos;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class CrudEstudiantesInscritosArchivo implements CrudEstudiantesInscritos {
     private static final String FILE_NAME = "estudiantesInscritos.txt";
+    private static final Logger logger = Logger.getLogger(CrudEstudiantesInscritosArchivo.class.getName());
     CrudEstudiante crudEstudiante = new CrudEstudianteArchivo();
+
+    // Obtener el último ID utilizado en el archivo
+    private int getLastId() {
+        int lastId = 0;
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                int currentId = Integer.parseInt(parts[0]);
+                if (currentId > lastId) {
+                    lastId = currentId;  // Actualizar el último ID encontrado
+                }
+            }
+        } catch (IOException e) {
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
+        }
+        return lastId;
+    }
 
     @Override
     public void insertar(EstudiantesInscritos objeto) {
+        // Incrementar el ID basado en el último ID
+        int newId = getLastId() + 1;
+        objeto = new EstudiantesInscritos(newId, objeto.getEstudiante());
+
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
-            writer.write(objeto.getId() + "," +
-                    objeto.getEstudiante().getId());
+            writer.write(objeto.getId() + "," + objeto.getEstudiante().getId());
             writer.newLine();
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Error: ", e.getMessage());
@@ -26,29 +50,29 @@ public class CrudEstudiantesInscritosArchivo implements CrudEstudiantesInscritos
 
     @Override
     public List<EstudiantesInscritos> buscarTodos() {
-        List<EstudiantesInscritos> EstudianteList = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))){
+        List<EstudiantesInscritos> estudianteList = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 Estudiante estudiante = crudEstudiante.buscarPorId(Integer.parseInt(parts[1]));
-                EstudianteList.add(new EstudiantesInscritos(Integer.parseInt(parts[0]),estudiante));
+                estudianteList.add(new EstudiantesInscritos(Integer.parseInt(parts[0]), estudiante));
             }
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
-        return EstudianteList;
+        return estudianteList;
     }
 
     @Override
     public EstudiantesInscritos buscarPorId(int id) {
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
-            while ((line = reader.readLine()) != null ) {
+            while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (Integer.parseInt(parts[0]) == id) {
-                    Estudiante estudiante = crudEstudiante.buscarPorId(Integer.parseInt(parts[0]));
-                    return new EstudiantesInscritos(Integer.parseInt(parts[0]),estudiante);
+                    Estudiante estudiante = crudEstudiante.buscarPorId(Integer.parseInt(parts[1]));
+                    return new EstudiantesInscritos(Integer.parseInt(parts[0]), estudiante);
                 }
             }
         } catch (IOException e) {
@@ -68,8 +92,8 @@ public class CrudEstudiantesInscritosArchivo implements CrudEstudiantesInscritos
                 if (idAhora == id) {
                     estudiantesInscritosList.add(objeto);
                 } else {
-                    Estudiante estudiante= crudEstudiante.buscarPorId(Integer.parseInt(parts[2]));
-                    estudiantesInscritosList.add(new EstudiantesInscritos(Integer.parseInt(parts[0]),estudiante));
+                    Estudiante estudiante = crudEstudiante.buscarPorId(Integer.parseInt(parts[1]));
+                    estudiantesInscritosList.add(new EstudiantesInscritos(idAhora, estudiante));
                 }
             }
         } catch (IOException e) {
@@ -77,37 +101,35 @@ public class CrudEstudiantesInscritosArchivo implements CrudEstudiantesInscritos
         }
 
         insertarListaEstudiantesInscritos(estudiantesInscritosList);
-
     }
+
     @Override
     public void eliminar(int id) {
-        List<EstudiantesInscritos> estudiantesIncritosList = new ArrayList<>();
+        List<EstudiantesInscritos> estudiantesInscritosList = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (Integer.parseInt(parts[0]) != id) {
                     Estudiante estudiante = crudEstudiante.buscarPorId(Integer.parseInt(parts[1]));
-                    estudiantesIncritosList.add(new EstudiantesInscritos(Integer.parseInt(parts[0]),estudiante));
+                    estudiantesInscritosList.add(new EstudiantesInscritos(Integer.parseInt(parts[0]), estudiante));
                 }
             }
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Error: ", e.getMessage());;
+            logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
 
-        insertarListaEstudiantesInscritos(estudiantesIncritosList);
+        insertarListaEstudiantesInscritos(estudiantesInscritosList);
     }
 
     private void insertarListaEstudiantesInscritos(List<EstudiantesInscritos> estudiantesInscritosList) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME))) {
-            for (EstudiantesInscritos d : estudiantesInscritosList) {
-                writer.write(d.getId() + "," + d.getEstudiante().getId());
+            for (EstudiantesInscritos estudianteInscrito : estudiantesInscritosList) {
+                writer.write(estudianteInscrito.getId() + "," + estudianteInscrito.getEstudiante().getId());
                 writer.newLine();
             }
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Error: ", e.getMessage());
         }
     }
-
-
 }
